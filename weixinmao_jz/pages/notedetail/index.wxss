@@ -1,0 +1,249 @@
+.type-container {
+    width: 100%;
+    height: 88rpx;
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1rpx solid #F2f2f2;
+    padding-bottom: 10rpx;
+    margin-bottom: 18rpx;
+}
+
+.type-navbar {
+    white-space: nowrap;
+    height: 88rpx;
+    background-color: #fff;
+}
+
+#baozhang .van-cell__title {
+  flex: none;
+}
+
+.title {
+  font-size:30rpx;
+  font-weight: 600;
+}
+.money {
+  color:red;
+  margin-top:10rpx;
+  font-weight:600
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.type-box {
+    width: 24.5%;
+    box-sizing: content-box;
+    font-size: 24rpx;
+    line-height: 84rpx;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.type-navbar-item {
+    border-bottom: 4rpx solid #fff;
+}
+
+.type-item-on {
+    border-bottom: 4rpx solid #e64340;
+}
+
+.container {
+    background-color: #f5f5f5;
+    min-height: 100%;
+}
+
+.container .orderlist {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    margin-top: 10rpx;
+}
+
+.container .orderlist .orderid {
+    border-bottom: 1rpx solid #efefef;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    padding-left: 20rpx;
+    font-size: .8rem;
+}
+
+.container .orderlist .content {
+    font-size: .8rem;
+    border-bottom: 1rpx solid #efefef;
+}
+
+.container .orderlist .content .item {
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+    padding-left: 20rpx;
+    border-bottom: 1rpx dotted #efefef;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .orderlist .content .payitem {
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+
+.container .orderlist .content .payitem view {
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-right: 20rpx;
+    border-radius: 5rpx;
+    background: #3274e5;
+    font-size: .6rem;
+    color: #FFF;
+}
+
+.goods {
+    margin: 0 0 15rpx;
+    background: #fff;
+  }
+  
+  
+
+  
+
+  
+  .goods .goodsDown {
+    justify-content: flex-end;
+    padding: 0 8rpx;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .goods .goodsBt {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24rpx 30rpx 35rpx;
+    width: 30%;
+    height: 100rpx;
+    flex-direction: row-reverse;
+  }
+  
+  .goods .goodsBt view {
+    width: 152rpx;
+    height: 52;
+    border-radius: 10rpx;
+    border: 1rpx solid;
+    margin-left: 20rpx;
+  }
+  
+  .goods .goodsBt view.bt1 {
+    border-color: #999999;
+    color: #999999;
+  }
+  
+  .goods .goodsBt view.bt2 {
+    border-color: #006633;
+    color: #006633;
+  }
+
+  .flexs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .border_bt{
+    border-bottom: 1rpx solid #efefef;
+    margin-bottom: 22rpx;
+    padding: 45rpx 30rpx 35rpx;
+  }
+  .js{
+    display: block;
+  }
+  .left1{
+    padding-right: 75%;
+  }
+  .fw-js{
+    padding:10px 10px 5px;
+    display:flex;    /*让view横排显示*/
+    justify-content:space-between;/*两端对齐*/
+    align-items:center; /*让view里的内容垂直居中*/
+  }
+  .tit{
+    border-bottom: 1rpx solid #efefef;
+    padding: 16rpx 0;
+  }
+  .tbimg{
+    width: 33rpx;
+    height: 42rpx;
+    margin: 0 0 3rpx 16rpx;
+  }
+
+  /* 底部加购 */
+
+.shopTabbar {
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  border-top: 1rpx solid #e5e5e5;
+  box-shadow: 0px -6rpx 6rpx rgba(229, 229, 229, 0.2); /*阴影出现在元素上方*/
+}
+
+.shopTabbar .content {
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  flex: 1;
+}
+
+.shopTabbar .content .left view {
+  width: 120rpx;
+}
+
+.shopTabbar .content .left view image {
+  width: 40rpx;
+  margin: 8rpx 0;
+}
+
+.shopTabbar .content .left view,
+.shopTabbar .content .left view navigator
+ {
+  flex-direction: column;
+}
+
+.shopTabbar .content .left view.flexs .num {
+  background: red;
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 100%;
+  top: 0;
+  right: 24rpx;
+}
+
+.shopTabbar .content .right {
+  width: 561rpx;
+  border: 1rpx solid #42Be9C;
+  border-radius: 35rpx;
+  height: 70rpx;
+  color: #fff;
+  overflow: hidden;
+}
+
+.shopTabbar .content .right view {
+  flex: 1;
+  height: 100%;
+}
+
+.shopTabbar .content .right view.bt_r {
+  background: #42Be9C;
+}

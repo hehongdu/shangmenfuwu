@@ -1,0 +1,262 @@
+.type-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1rpx solid #F2f2f2;
+    padding-bottom: 10rpx;
+}
+
+.beituxuhua {
+  min-height:700rpx;
+  position:absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  filter: blur(7rpx);
+}
+
+.type-navbar {
+    white-space: nowrap;
+    height: 100%;
+    background-color: #fff;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.action_bar {
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  color:#fff
+}
+
+.action_bar view:nth-child(2) {
+  font-size:30rpx;
+}
+
+.action_row {
+  background:rgba(0,0,0,0.3);
+  height: 100rpx;
+}
+.van-tabs__scroll--card {
+  margin: 0 !important;
+}
+
+.detail {
+  position: relative;
+  color:#fff
+}
+.detail_top {
+  padding:20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 220rpx;
+}
+.detail_text {
+  width: 66%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+}
+
+.about_des {
+  padding:0rpx 20rpx;
+  display: inline-block;
+  /* justify-content: flex-start;
+  width: 100%; */
+}
+.conts {
+  font-size: 20rpx;
+  line-height: 50rpx;
+  /*关键属性（必须有的）  */
+  display: -webkit-box;
+}
+
+.hide {
+  /*规定子元素的排列方向 */
+  -webkit-box-orient: vertical;
+  /*限制文本显示的行数  */
+  -webkit-line-clamp: 1;
+  /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.type-navbar-item {
+    border-bottom: 4rpx solid #fff;
+}
+
+.type-item-on {
+    border-bottom: 4rpx solid #e64340;
+}
+
+.container {
+    background-color: #f5f5f5;
+    min-height: 100%;
+}
+
+.container .orderlist {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    margin-top: 10rpx;
+}
+.tags {
+  padding:20rpx;
+}
+.tag {
+  margin-left:20rpx;
+}
+
+.image-group {
+  display: flex;
+  white-space: nowrap;
+  margin: 20rpx 0;
+}
+.image-group image {
+  display: inline-block;
+  width: calc(100% / 3 - 20rpx);
+  height: 220rpx;
+  border-radius: 20rpx;
+  margin: 0rpx 10rpx;
+}
+
+
+.goods {
+    margin: 0 0 15rpx;
+    background: #fff;
+  }
+  
+  .goods .type {
+    height: 80rpx;
+    justify-content: flex-end;
+    color: #999999;
+  }
+  
+  .goods .goodsTop {
+    justify-content: left;
+    padding: 0 30rpx 10rpx;
+  }
+  
+  .goods .goodsTop .goodsImg {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 10rpx;
+    background: center center /cover;
+    overflow: hidden;
+    margin-right: 30rpx;
+  }
+  
+  .goods .goodsTop .goodsAbout {
+    align-items: flex-start;
+    flex: 1;
+    justify-content: space-between;
+    height: 160rpx;
+  }
+  
+  .goods .goodsTop .goodsAbout .left {
+    width: 350rpx;
+  }
+  
+  .goods .goodsTop .goodsAbout .left .tit {
+    margin-bottom: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 40rpx;
+  }
+  
+  .goods .goodsTop .goodsAbout .right view {
+    text-align: right;
+    margin-bottom: 10rpx;
+  }
+  
+  .goods .goodsDown {
+    justify-content: flex-end;
+    height: 70rpx;
+    padding: 0 30rpx 35rpx;
+  }
+  
+  .goods .goodsBt {
+    justify-content: flex-end;
+    padding: 24rpx 30rpx 35rpx;
+    border-top: 1rpx solid #efefef;
+  }
+  
+  .goods .goodsBt view {
+    width: 152rpx;
+    height: 52;
+    border-radius: 10rpx;
+    border: 1rpx solid;
+    margin-left: 20rpx;
+  }
+  
+  .goods .goodsBt view.bt1 {
+    border-color: #999999;
+    color: #999999;
+  }
+  
+  .goods .goodsBt view.bt2 {
+    border-color: #006633;
+    color: #006633;
+  }
+
+  .flexs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left{
+      padding-right: 65%;
+  }
+  
+  .border_bt{
+    border-bottom: 1rpx solid #efefef;
+    margin-bottom: 22rpx;
+    padding: 45rpx 30rpx 35rpx;
+  }
+  .js{
+    display: block;
+  }
+  .left1{
+    padding-right: 75%;
+  }
+  .type-container .type-navbar .type-box .jsimg {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+    background: center center /cover;
+    overflow: hidden;
+    margin-left:20rpx
+  }
+  .type-container .type-navbar .type-box view text {
+    color: #42BE9C;
+    font-size: 30rpx;
+  }
+  .type-container .type-navbar .type-box .jstxt {
+    width: 100%;
+    padding:10rpx 40rpx;
+    overflow: hidden;
+    line-height: 46rpx;
+    word-wrap: break-word;
+    white-space: pre-line;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .goods .all image {
+    width: 11rpx;
+    margin: 0 0 3rpx 12rpx;
+}

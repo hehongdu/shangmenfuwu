@@ -1,0 +1,25 @@
+<form reportSubmit bindsubmit="binduser">
+    <view class="container">
+        <view class="btnuser">
+            <view>登录</view>
+            <view>
+                <image src="https://www.wangsen13.cn/attachment/images/2/2018/08/MV18uhUv0LG4gLTgu11V1EaG3Z0Dlh.jpg"></image>
+            </view>
+            <button bindgetphonenumber="getPhoneNumber" openType="getPhoneNumber"> 微信授权登录</button>
+        </view>
+    </view>
+</form>
+<view class="weixinmao-msg-userinfo" hidden="{{isuser}}">
+    <view class="weixinmao-content-userinfo">
+        <view class="userinfo-title">
+          用户信息授权
+        </view>
+        <view class="userinfo-content">
+         点击授权登录,太仓海量工作等你来选~
+        </view>
+        <view class="userinfo-button">
+            <button bindtap="cancelUser"></button>
+            <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo">去授权</button>
+        </view>
+    </view>
+</view>

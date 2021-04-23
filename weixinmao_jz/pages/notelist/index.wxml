@@ -1,0 +1,53 @@
+<view class="container" hidden="{{isshow}}">
+    <view class="type-container">
+        <scroll-view class="type-navbar" scrollX="true">
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==1?'type-item-on':''}}" id="1">
+                    全部
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==2?'type-item-on':''}}" id="2">
+                  按摩
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==3?'type-item-on':''}}" id="3">
+                  养生
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==4?'type-item-on':''}}" id="4">
+                  SPA
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="goods bg_f" wx:key="id" wx:for="{{fuwulist}}">
+        <view class="goodsImg">
+            <image class="img" src="{{item.src}}"></image>
+        </view>
+        <view class="fw-js">
+                <view class="goodsAbout">
+                    <view class="tit f14">{{item.title}}</view>
+                    <view class="cl_6 f12" style="height:100rpx;display:flex;justify-content:space-between;align-items:center">
+                        <view style="display:flex;justify-content:flex-start;align-items:center">
+                            <view style="display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="gold-coin-o" /> {{item.amount}}元/次
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-around;align-items:center">
+                                <van-icon name="clock-o" /> {{item.time}}分钟
+
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="home-o" />{{item.juli}} 
+
+                            </view>
+                        </view>      
+                        <view bindtap="toNoteDetail" class="flexs bt2">预约</view> 
+                    </view>
+                    <view class="cl_6 f12 jieduan" style="margin-top:10rpx">功能介绍：{{item.des}}</view>
+            </view>
+        </view>
+    </view>
+</view>

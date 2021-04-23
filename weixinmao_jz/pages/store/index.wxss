@@ -1,0 +1,70 @@
+.container {
+    background-color: #FFF;
+    min-height: 100%;
+}
+
+.top {
+    height:350rpx;
+    position: relative;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    background:0 0 / 100% 100%  no-repeat;
+}
+.action_bar {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    color:#000;
+    margin: 20rpx 0;
+}
+  
+.action_bar view:nth-child(2) {
+    font-size:25rpx;
+    font-weight: 530;
+}
+  
+.action_row {
+    height: 100%;
+}
+
+.tuijianxiangmu {
+    margin-top:20rpx;
+    width:98%;
+    margin:0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.block {
+    width:calc(100% / 2 - 20rpx);
+    height:480rpx;
+    margin:10rpx;
+    border-radius:10rpx;
+    background:#fff;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    padding-left:10rpx;
+    margin-top:10rpx;
+    font-weight: bold;
+}
+.price {
+    padding-left:10rpx;
+    color:red;
+}
+.img {
+    height: 75%;
+}
+
+.img image {
+    height: 100%;
+    border-radius:10rpx;
+}

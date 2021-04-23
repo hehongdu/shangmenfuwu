@@ -1,0 +1,108 @@
+<scroll-view class="bigWrap" scrollTop="{{scrollTop}}" scrollY="true" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+    <view class="container">
+		<view class="box header">
+			<view class="cu-bar bg-red search">
+                <view class="action">
+					<text>广州</text>
+					<text class="cuIcon-triangledownfill"></text>
+				</view>
+				<view class="search-form radius">
+					<text class="cuIcon-search"></text>
+					<input adjust-position="false" type="text" placeholder="请输入服务或技师" confirm-type="search" bindtap="toSearch"></input>
+				</view>
+			</view>
+		</view>
+        <view class="swiper-container">
+            <swiper class="screen-swiper" class="square-dot" indicator-dots="true" circular="true" autoplay="{{true}}" interval="5000" duration="500">
+			<swiper-item wx:for="{{banner}}" key="{{index}}" style="border-radius: 10px;">
+				<image src="{{item}}" style="height:100%" mode="aspectFill" style="border-radius: 10px;"></image>
+			</swiper-item>
+		    </swiper>
+        </view>
+        <view class="navlist">
+            <view bindtap="toNotelist" class="item">
+                <image style="width:44px;height:44px" src="../../resource/images/t6.png"></image>
+                <view>预约服务</view>
+            </view>
+            <view bindtap="toServiceorder" class="item">
+                <image  style="width:44px;height:44px" src="../../resource/images/t4.png"></image>
+                <view>我要下单</view>
+            </view>
+            <view bindtap="toMyorder" class="item">
+                <image  style="width:44px;height:44px" src="../../resource/images/t2.png"></image>
+                <view>我的订单</view>
+            </view>
+            <view bindtap="toLogin" class="item">
+                <image  style="width:44px;height:44px" src="../../resource/images/t1.png"></image>
+                <view>在线咨询</view>
+            </view>
+        </view>
+        <view class="notice" style="display:flex;justify-content:center;align-items:center;width:100%">
+            <van-notice-bar background="#42BE9C" color="#fff" style="width:100%" scrollable text="下单付款后技师会主动联系你哦~~" />
+        </view>
+        <view class="news">
+            <view class="cu-bar bg-white">
+				<view class="action sub-title">
+					<text class="text-xl text-bold text-blue" style="color:#42BE9C">优秀技师</text>
+					<text class="text-ABC text-blue" style="color:#42BE9C">technician</text>
+					<!-- last-child选择器-->
+				</view>
+			</view>
+            <view class="cu-list menu-avatar">
+                <view class="cu-item" style="height:260rpx;position:relative" wx:for="{{jishilist}}" wx:key bindtap="toProject">
+                    <view class="cu-avatar radius lg" style="background-image:url({{item.imgurl}});width:220rpx;height:220rpx;"></view>
+                    <view class="content" style="height: 240rpx;left:270rpx;">
+                        <view style="display:flex;justify-content:space-between">
+                            <view>{{item.name}}</view>
+                            <view style="font-size:20rpx;display:flex;align-items:center;justify-content:center"><van-icon name="shop-o" />{{item.store}} ></view>
+                        </view>
+                        <view class="jieduan" style="font-size:20rpx"><van-icon name="location-o" />{{item.address}}</view>
+                        <view class="jieduan" style="font-size:20rpx">服务技能：{{item.speactial}}</view>
+                        <view style="position:absolute;bottom:0;right:0">
+                            <van-button type="danger" size="small">立即预约</van-button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="cu-bar bg-white">
+				<view class="action sub-title">
+					<text class="text-xl text-bold text-blue" style="color:#42BE9C">服务项目</text>
+					<text class="text-ABC text-blue" style="color:#42BE9C">service</text>
+					<!-- last-child选择器-->
+				</view>
+            </view>
+            <view class="fuwu">
+                <view class="goods bg_f" style="position:relative" wx:key="id" wx:for="{{fuwulist}}">
+        <view class="goodsImg">
+            <image class="img" mode="aspectFill" src="{{item.src}}"></image>
+        </view>
+        <view class="fw-js">
+                <view class="goodsAbout">
+                    <view class="tit f14">{{item.title}}</view>
+                    <view class="cl_6 f12" style="height:100rpx;display:flex;justify-content:space-between;align-items:center">
+                        <view style="display:flex;justify-content:flex-start;align-items:center">
+                            <view style="display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="gold-coin-o" /> {{item.amount}}元/次
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-around;align-items:center">
+                                <van-icon name="clock-o" /> {{item.time}}分钟
+
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="home-o" />{{item.juli}} 
+
+                            </view>
+                        </view>      
+                        <view style="position:absolute;bottom:40%;right:0">
+                            <van-button bindtap="toNoteDetail" color="#42BE9C" size="small">立即预约</van-button>
+                        </view>
+                    </view>
+                    <view class="cl_6 f12 jieduan" style="margin-top:10rpx">功能介绍：{{item.des}}</view>
+            </view>
+        </view>
+    </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

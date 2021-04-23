@@ -1,0 +1,179 @@
+<view class="container" hidden="{{isshow}}">
+    <view class="type-container">
+        <scroll-view class="type-navbar" scrollX="true">
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==1?'type-item-on':''}}" id="1">
+                    全部订单
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==2?'type-item-on':''}}" id="2">
+                  未付款
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==3?'type-item-on':''}}" id="3">
+                  已付款
+                </view>
+            </view>
+            <view class="type-box">
+                <view bindtap="tabClick" class="type-navbar-item {{ordertype==4?'type-item-on':''}}" id="4">
+                  已完成
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="orderlist" wx:for="{{list}}">
+        <view class="orderid">订单号:{{item.orderid}}</view>
+        <view class="content">
+            <view class="item">支付订金:￥{{item.money}}</view>
+            <view class="item">状态:<text style="color:red; font-weight:600;">{{item.paid==1?'已支付':'未支付'}}</text>
+            </view>
+            <view class="item">创建时间:{{item.createtime}}</view>
+            <view class="payitem"></view>
+        </view>
+    </view>
+
+
+
+    <view class="goods bg_f" wx:key="id">
+        <view class="type flexs border_bt">
+            <view class="type flexs left f14">订单号：298763517839</view>
+            <view class="type flexs red f14">{{item.type==1?'交易成功':item.type==2?'待付款':item.type==3?'待发货':'待收货'}}</view>
+        </view>
+        <view class="goodsTop flexs">
+            <view class="goodsImg">
+                <image src="../../resource/images/jia3.jpg" class="goodsImg"></image>
+            </view>
+            <view class="goodsAbout flexs">
+                <view>
+                    <view class="tit f14">特色全身油压养生SPA</view>
+                    <view class="cl_6 f12">
+                        <text class="js">90分钟特色全身油压，推油</text>
+                        <text class="js">预约时间：20201-03-22 22:00</text>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="f14">
+                        <text>￥</text>598.00
+                    </view>
+                    <view class="f14">
+                        <text>×</text>1
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="goodsDown flexs f14">
+            <text class="left1">合计</text><text class="f14">￥</text><text>598.00</text>
+        </view>
+        <view class="goodsBt flexs f14">
+            <view class="flexs bt1">取消预约</view>
+            <view class="flexs bt2">立即支付</view>
+        </view>
+    </view>
+    <view class="goods bg_f" wx:key="id">
+        <view class="type flexs border_bt">
+            <view class="type flexs left f14">订单号：298763517839</view>
+            <view class="type flexs red f14">{{item.type==1?'交易成功':item.type==2?'待付款':item.type==3?'待发货':'待收货'}}</view>
+        </view>
+        <view class="goodsTop flexs">
+            <view class="goodsImg">
+                <image src="../../resource/images/jia4.jpg" class="goodsImg"></image>
+            </view>
+            <view class="goodsAbout flexs">
+                <view>
+                    <view class="tit f14">特色全身油压养生SPA</view>
+                    <view class="cl_6 f12">
+                        <text class="js">90分钟特色全身油压，推油</text>
+                        <text class="js">预约时间：20201-03-22 22:00</text>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="f14">
+                        <text>￥</text>598.00
+                    </view>
+                    <view class="f14">
+                        <text>×</text>1
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="goodsDown flexs f14">
+            <text class="left1">合计</text><text class="f12">￥</text><text>598.00</text>
+        </view>
+        <view class="goodsBt flexs f14">
+            <view class="flexs bt1">取消预约</view>
+            <view class="flexs bt2">立即支付</view>
+        </view>
+    </view>
+    <view class="goods bg_f" wx:key="id">
+        <view class="type flexs border_bt">
+            <view class="type flexs left f14">订单号：298763517839</view>
+            <view class="type flexs red f14">{{item.type==1?'交易成功':item.type==2?'待付款':item.type==3?'待发货':'待收货'}}</view>
+        </view>
+        <view class="goodsTop flexs">
+            <view class="goodsImg">
+                <image src="../../resource/images/jia3.jpg" class="goodsImg"></image>
+            </view>
+            <view class="goodsAbout flexs">
+                <view>
+                    <view class="tit f14">特色全身油压养生SPA</view>
+                    <view class="cl_6 f12">
+                        <text class="js">90分钟特色全身油压，推油</text>
+                        <text class="js">预约时间：20201-03-22 22:00</text>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="f14">
+                        <text>￥</text>598.00
+                    </view>
+                    <view class="f14">
+                        <text>×</text>1
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="goodsDown flexs f14">
+            <text class="left1">合计</text><text class="f14">￥</text><text>598.00</text>
+        </view>
+        <view class="goodsBt flexs f14">
+            <view class="flexs bt1">取消预约</view>
+            <view class="flexs bt2">立即支付</view>
+        </view>
+    </view>
+    <view class="goods bg_f" wx:key="id">
+        <view class="type flexs border_bt">
+            <view class="type flexs left f14">订单号：298763517839</view>
+            <view class="type flexs red f14">{{item.type==1?'交易成功':item.type==2?'待付款':item.type==3?'待发货':'待收货'}}</view>
+        </view>
+        <view class="goodsTop flexs">
+            <view class="goodsImg">
+                <image src="../../resource/images/jia4.jpg" class="goodsImg"></image>
+            </view>
+            <view class="goodsAbout flexs">
+                <view>
+                    <view class="tit f14">特色全身油压养生SPA</view>
+                    <view class="cl_6 f12">
+                        <text class="js">90分钟特色全身油压，推油</text>
+                        <text class="js">预约时间：20201-03-22 22:00</text>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="f14">
+                        <text>￥</text>598.00
+                    </view>
+                    <view class="f14">
+                        <text>×</text>1
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="goodsDown flexs f14">
+            <text class="left1">合计</text><text class="f14">￥</text><text>598.00</text>
+        </view>
+        <view class="goodsBt flexs f14">
+            <view class="flexs bt1">取消预约</view>
+            <view class="flexs bt2">立即支付</view>
+        </view>
+    </view>
+</view>

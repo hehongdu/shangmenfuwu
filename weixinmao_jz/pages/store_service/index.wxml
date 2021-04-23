@@ -1,0 +1,47 @@
+<view class="container">
+    <van-sticky>
+        <view class="action_row">
+        <view span="6" class="action_bar {{active == 1?'red':''}}" data-key="1" bindtap="clickSort">
+            <view>推荐</view>
+        </view>
+        <view span="6" class="action_bar {{active == 2?'red':''}}" data-key="2" bindtap="clickSort">
+            <view>热门</view>
+        </view>
+        <view span="6" class="action_bar {{active == 3?'red':''}}" data-key="3" bindtap="clickSort">
+            <view>价格</view>
+        </view>
+    </view>
+    </van-sticky>
+    <view class="fuwu">
+                <view class="goods bg_f" style="position:relative" wx:key="id" wx:for="{{fuwulist}}">
+        <view class="goodsImg">
+            <image class="img" mode="aspectFill" src="{{item.src}}"></image>
+        </view>
+        <view class="fw-js">
+                <view class="goodsAbout">
+                    <view class="tit f14">{{item.title}}</view>
+                    <view class="cl_6 f12" style="height:100rpx;display:flex;justify-content:space-between;align-items:center">
+                        <view style="display:flex;justify-content:flex-start;align-items:center">
+                            <view style="display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="gold-coin-o" /> {{item.amount}}元/次
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-around;align-items:center">
+                                <van-icon name="clock-o" /> {{item.time}}分钟
+
+                            </view>
+                            <view style="margin-left:10rpx;display:flex;justify-content:space-between;align-items:center">
+                                <van-icon name="home-o" />{{item.juli}} 
+
+                            </view>
+                        </view>      
+                        <view style="position:absolute;bottom:40%;right:0">
+                            <van-button bindtap="toNoteDetail" color="#42BE9C" size="small">立即预约</van-button>
+                        </view>
+                    </view>
+                    <view class="cl_6 f12 jieduan" style="margin-top:10rpx">功能介绍：{{item.des}}</view>
+            </view>
+        </view>
+    </view>
+    </view>
+    <view class="cu-load {{isLoad?'loading':'over'}}" style="background:#42BE9C"></view>
+</view>

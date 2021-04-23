@@ -1,0 +1,73 @@
+<view class="container" hidden="{{isshow}}">
+    <swiper indicator-dots="{{indicatorDots}}" style="height:400rpx"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{resourse}}" wx:key="{{index}}">
+          <swiper-item style="height:100%">
+            <image style="height:100%;width:100%" mode="aspectFill" bindtap="preview" data-key="{{index}}" data-list="{{resourse}}"  src="{{item.src}}" wx-if="{{item.type == 1}}"/>
+            <video style="width:100%;height:100%;" bindtap="preview" data-key="{{index}}"  data-list="{{resourse}}" src="{{item.src}}" wx-if="{{item.type == 2}}" controls="true" custom-cache="false" :poster="item.src" />
+          </swiper-item>
+        </block>
+    </swiper>
+    <view class="goods bg_f" wx:key="id">
+        <view class="fw-js">
+            <view class="goodsDown f14">
+                <view class="goodsAbout">
+                    <view>
+                        <view class="title">{{data.title}}</view>
+                        <view class="money">¥ <text style="font-size:50rpx;">{{data.amount}}</text></view>
+                        <view class="cl_6 f12">
+                            <text class="js">{{data.des}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view>
+            <van-cell id="baozhang" title="保障" arrow-direction="down">
+                <van-icon name="gold-coin" /> <text style="font-size:20rpx">未服务全额退</text>
+                <van-icon name="umbrella-circle" /> <text style="font-size:20rpx">爽约包赔 </text>
+                <van-icon name="like" /> <text style="font-size:20rpx">不满意重服务 </text>
+                <van-icon name="fire" /> <text style="font-size:20rpx">全场保障</text>
+            </van-cell>
+            <van-cell title="预约时间" is-link value="{{currentDateStr}}" bindtap="chooseTime" arrow-direction="down" />
+        </view>
+
+        <van-popup show="{{ popupshow }}" position="bottom" custom-style="height: 50%;" bind:close="onClose">
+            <van-datetime-picker type="datetime" bind:cancel="onClose" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:confirm="onConfirm"/>
+        </van-popup>
+    </view>
+    <view class="goods bg_f" wx:key="id">
+        <view class="tit f14">
+            <image src="../../resource/img/sg.png" class="tbimg"></image>服务详情
+        </view>
+        <view class="fw-js">
+            <view class="cl_6 f12">
+                <rich-text class='content' nodes="{{data.detail}}"></rich-text>                
+            </view>
+        </view>
+    </view>
+    <!-- 底部预约 -->
+    <view class="shopTabbar flexs">
+        <view class="flexs content">
+            <view class="left flexs f12">
+                <view class="flexs pos_r">
+                    <navigator class="flexs" hover-class="none" open-type="switchTab" url="/pages/index/index">
+                    <text class="fa fa-phone fa-lg tb"></text>
+                    <text>电话</text>
+                    </navigator>
+                </view>
+            </view>
+            <view class="right flexs f12">
+                <view class="flexs bt_r cl_f" data-type="2" bindtap="toPayOrder">
+                    立即预约
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="u-tap-btn">
+    <navigator class="u-go-home" openType="switchTab" url="/weixinmao_jz/pages/index/index">
+        <!-- <view class="iconfont fa fa-home"></view> -->
+        <text class="fa fa-home fa-lg tb" style="font-size:52rpx;margin-top:20rpx;"></text>
+    </navigator>
+</view>

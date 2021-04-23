@@ -1,0 +1,186 @@
+.type-container {
+    width: 100%;
+    height: 88rpx;
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1rpx solid #F2f2f2;
+    padding-bottom: 10rpx;
+    margin-bottom: 18rpx;
+}
+
+.type-navbar {
+    white-space: nowrap;
+    height: 88rpx;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.type-box {
+    width: 24.5%;
+    box-sizing: content-box;
+    font-size: 24rpx;
+    line-height: 84rpx;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.type-navbar-item {
+    border-bottom: 4rpx solid #fff;
+}
+
+.type-item-on {
+    border-bottom: 4rpx solid #e64340;
+}
+
+.container {
+    background-color: #f5f5f5;
+    min-height: 100%;
+}
+
+.container .orderlist {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    margin-top: 10rpx;
+}
+
+.container .orderlist .orderid {
+    border-bottom: 1rpx solid #efefef;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    padding-left: 20rpx;
+    font-size: .8rem;
+}
+
+.container .orderlist .content {
+    font-size: .8rem;
+    border-bottom: 1rpx solid #efefef;
+}
+
+.container .orderlist .content .item {
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+    padding-left: 20rpx;
+    border-bottom: 1rpx dotted #efefef;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .orderlist .content .payitem {
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+
+.container .orderlist .content .payitem view {
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-right: 20rpx;
+    border-radius: 5rpx;
+    background: #3274e5;
+    font-size: .6rem;
+    color: #FFF;
+}
+
+.goods {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 15rpx;
+    background: #fff;
+    display:flex;
+    justify-content: space-between;
+  }
+  .goodsAbout {
+    width: 100%;
+  }
+  .goods .type {
+    height: 80rpx;
+    justify-content: flex-end;
+  }
+  
+  .goods .goodsTop {
+    justify-content: left;
+    padding: 18rpx 30rpx 35rpx;
+  }
+  
+  .goods .goodsImg {
+    width: 30%;
+    height: 210rpx;
+    border-radius: 10rpx;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .goods .goodsBt {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24rpx 30rpx 35rpx;
+    width: 30%;
+    height: 100rpx;
+    flex-direction: row-reverse;
+  }
+  
+  .goods .goodsBt view {
+    width: 152rpx;
+    height: 52;
+    border-radius: 10rpx;
+    border: 1rpx solid;
+    margin-left: 20rpx;
+  }
+  
+  .goods .goodsBt view.bt1 {
+    border-color: #999999;
+    color: #999999;
+  }
+  
+  .bt2 {
+    background:#42BE9C;
+    border-radius: 10rpx;
+    color:#fff;
+    width:100rpx;
+    margin-right: 10rpx;
+    text-align:center;
+  }
+  .left{
+      padding-right: 44%;
+  }
+
+  .jieduan {
+    width:100%; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+  }
+  
+  .border_bt{
+    border-bottom: 1rpx solid #efefef;
+    margin-bottom: 22rpx;
+    padding: 45rpx 30rpx 35rpx;
+  }
+  .js{
+    display: inline-block;
+  }
+  .left1{
+    padding-right: 75%;
+  }
+  .fw-js{
+    width: 70%;
+    padding:10rpx;
+    display: flex;
+    align-items:center;
+    /* align-items:center; 让view里的内容垂直居中 */
+  }

@@ -1,0 +1,117 @@
+<view class="container">
+    <form bindsubmit="bindSave">
+        <view class="search">
+            <icon size="14" type="search"></icon>
+            <input confirmType="search" name="keyword" placeholder="请输入服务或技师" placeholderClass="search_plac" type="text"></input>
+            <button formType="submit">搜索</button>
+        </view>
+    </form>
+    <view class="news" wx:if="{{list}}">
+        <view class="newslist" wx:for="{{list}}">
+            <view bindtap="toNewsDetail" class="pic" data-id="{{item.id}}">
+                <image src="{{item.thumb}}"></image>
+            </view>
+            <view bindtap="toNewsDetail" class="title" data-id="{{item.id}}">
+                <view>{{item.housename}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view>
+        <view class="fuwuls">服务</view>
+        <view class="goods bg_f" wx:key="id">
+            <view class="goodsTop flexs">
+                <view class="goodsImg" style="background-image:url(../../resource/images/fuwu1.jpg)">
+                </view>
+            </view>
+            <view class="fw-js">
+                <view class="goodsDown f14">
+                    <view class="goodsAbout">
+                        <view>
+                            <view class="tit f14">特色全身油压养生SPA</view>
+                            <view class="cl_6 f12">
+                                <text class="js">90分钟特色全身油压，推油</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="goodsBt f12" bindtap="toNoteDetail">
+                    <view class="flexs bt2">立即预约</view>
+                </view>
+            </view>
+        </view>
+        <view class="goods bg_f" wx:key="id">
+            <view class="goodsTop flexs">
+                <view class="goodsImg" style="background-image:url(../../resource/images/fuwu2.jpg)">
+                </view>
+            </view>
+            <view class="fw-js">
+                <view class="goodsDown f14">
+                    <view class="goodsAbout">
+                        <view>
+                            <view class="tit f14">特色全身油压养生SPA</view>
+                            <view class="cl_6 f12">
+                                <text class="js">90分钟特色全身油压，推油</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="goodsBt f12" bindtap="toNoteDetail">
+                    <view class="flexs bt2">立即预约</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="jishi">技师</view>
+        <view class="newslist">
+            <view bindtap="toProject" class="pic" data-id="1">
+                <image src="../../resource/images/jia3.jpg"></image>
+            </view>
+            <view class="title">
+                <view bindtap="toProject" class="address" data-id="{{item.id}}">
+                    <view>小萱</view>
+                </view>
+                <view bindtap="toProject" class="housearea" data-id="{{item.id}}">分雨无阻，贴心服务，专业优秀，经验丰富</view>
+                <view class="price">
+                    <view>五星芳疗师</view>
+                    <view>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                    </view>
+                    <view bindtap="toProject" class="money" data-id="{{item.id}}" style="background:{{intro.maincolor}};"> 立即预约</view>
+                </view>
+            </view>
+        </view>
+        <view class="newslist">
+            <view bindtap="toProject" class="pic" data-id="1">
+                <image src="../../resource/images/jia4.jpg"></image>
+            </view>
+            <view class="title">
+                <view bindtap="toProject" class="address" data-id="{{item.id}}">
+                    <view>小美</view>
+                </view>
+                <view bindtap="toProject" class="housearea" data-id="{{item.id}}">分雨无阻，贴心服务，专业优秀，经验丰富</view>
+                <view class="price">
+                    <view>五星芳疗师</view>
+                    <view>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                        <text class="fa fa-star  fa-lg"></text>
+                    </view>
+                    <view bindtap="toProject" class="money" data-id="{{item.id}}" style="background:{{intro.maincolor}};"> 立即预约</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="loadmore" hidden="{{loadmore}}">
+        <text>未查找到相关信息</text>
+    </view>
+</view>

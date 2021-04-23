@@ -1,0 +1,42 @@
+.container {
+    background-color: #FFF;
+    min-height: 100%;
+    position: relative;
+}
+
+.action_bar {
+    width: calc(100% / 5);
+    height: 100%;
+    text-align:center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items:center;
+    color:#000;
+    margin: 20rpx 0;
+    flex:1
+}
+  
+.action_bar view:nth-child(2) {
+    font-size:25rpx;
+    font-weight: 530;
+}
+  
+.action_row {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    border-bottom:1px solid #f4f4f4;
+    background:#fff;
+    z-index: 999;
+}
+
+.cu-card>.cu-item {
+    border-bottom:1px solid #f4f4f4;
+    padding-bottom:20rpx;
+    margin:0rpx;
+}

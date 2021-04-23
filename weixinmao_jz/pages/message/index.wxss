@@ -1,0 +1,153 @@
+/* pages/msgCenter/msgCenter.wxss */
+/* 超出省略 */
+.hid{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.clear{
+  overflow: hidden;
+}
+.flexs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page{
+  background: #f8f8f8;
+}
+.list_main{
+   margin: 0 0 140rpx; 
+}
+.list_main .edit_top{
+  line-height: 80rpx;
+  height: 80rpx;
+  z-index: 999;
+}
+.list_main  .edit_top .top_in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:0 50rpx;
+  font-size: 24rpx;
+  height: 80rpx;
+  justify-content:flex-end;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.list_main  .edit_top .mg_l{
+  margin-right:50rpx;
+}
+.list_main  .edit_top view {
+  height: 80rpx;
+  color: #666666;
+}
+.list_main  .edit_top view image{
+  width: 32rpx;
+  margin-right: 6rpx;
+}
+
+.list_main .list_down{
+  margin: 0 24rpx;
+}
+.list_main .list_down .list_row{
+ 
+  padding: 0 0 0 ;
+  margin-bottom: 20rpx;
+  border-radius: 16rpx;
+}
+.list_main .list_down .list_row .row_l image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 30rpx;
+}
+.list_main .list_down .list_row .row_r {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0 32rpx 0 32rpx;
+  flex: 1;
+}
+.list_main .list_down .list_row .row_r .left{
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 100%;
+  min-width: 114rpx;
+  background: no-repeat center center / cover;
+  margin-right: 20rpx;
+  border: 2rpx solid #f5f5f5;
+}
+.list_main .list_down .list_row .row_r .content{
+  line-height: 38rpx;
+  font-size: 24rpx;
+  margin-top: 42rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.list_main .list_down .list_row .row_r .time{
+   font-size: 20rpx;
+   color: #999999;
+   background: #f8f8f8;
+   border-radius: 18rpx;
+   height: 36rpx;
+   line-height: 36rpx;
+   display: inline-block;
+   padding:0 18rpx;
+   margin-top: 16rpx;
+   margin-bottom: 42rpx;
+}
+
+
+/* 底部全选删除 */
+.down_tab{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 120rpx;
+  width: 100%;
+  border-top: 1rpx solid  #e5e5e5;
+  z-index: 999;
+  background: #fff;
+}
+
+.down_tab .list_top{
+  justify-content: space-between;
+  margin:0 24rpx;
+  color: #000;
+  font-size: 26rpx;
+  height: 120rpx;
+}
+
+.down_tab  .list_top view {
+  width: 150rpx;
+  height: 90rpx;
+}
+
+.down_tab  .list_top view image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+.down_tab  .list_top .delect_bt{
+  width: 460rpx;
+  height: 70rpx;
+  background: #42BE9C;
+  color: #fff;
+  border-radius: 6rpx;
+}
+.zwxx{
+  height:163.29px; 
+  width:460rpx;
+  margin-bottom:40rpx;
+}
+.no_msg {
+  padding-top: 230rpx;
+  text-align: center;
+  color: #555555;
+  font-size: 30rpx;
+}

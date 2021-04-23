@@ -1,0 +1,24 @@
+<view class="container" hidden="{{isshow}}">
+    <checkbox-group bindchange="SelectChange">
+        <view class="news">
+            <view class="newslist" wx:for="{{article}}">
+                <view class="select">
+                    <checkbox class="check" value="{{item.money}}@{{item.id}}"></checkbox>
+                </view>
+                <view class="pic" data-id="{{item.id}}">
+                    <image src="{{item.thumb}}"></image>
+                </view>
+                <view class="title" data-id="{{item.id}}">
+                    <view>{{item.title}}</view>
+                    <view>{{item.intro}}</view>
+                </view>
+            </view>
+        </view>
+    </checkbox-group>
+</view>
+<view class="weixinmao-float">
+    <view class="weixinmao-foot">
+        <view bindtap="goMap" class="footer">预约订金：￥{{totalprice}}</view>
+        <view bindtap="toOrder" class="footer" style="background:{{intro.maincolor}}">提交</view>
+    </view>
+</view>

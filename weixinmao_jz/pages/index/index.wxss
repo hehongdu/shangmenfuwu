@@ -1,0 +1,181 @@
+.container {
+    background-color: #f0f0f0;
+    min-height: 100%;
+}
+
+.header {
+    width: 100%;
+    padding: 0 0 25rpx;
+}
+
+.search {
+    background:#fff !important;
+    color:#000
+}
+
+.swiper-container {
+    width: 95%;
+    position: relative;
+    margin:0 auto;
+    margin-bottom: 25rpx;
+}
+
+.swiper_box {
+    width: 100%;
+    height: 362.5rpx;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    height: 362.5rpx;
+}
+
+.swiper-container .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-container .dots .dot {
+    margin: 0 8rpx;
+    width: 14rpx;
+    height: 14rpx;
+    background: #fff;
+    border-radius: 50%;
+    transition: all .6s;
+    opacity: .5;
+}
+
+.swiper-container .dots .dot.active {
+    width: 14rpx;
+    opacity: 1;
+}
+
+.navlist {
+    width: 750rpx;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 30rpx;
+    flex-wrap: wrap;
+    background: #FFF;
+}
+
+.navlist .item {
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .7rem;
+    padding-bottom: 30rpx;
+}
+
+.navlist .item image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.navlist .item>view {
+    margin-top: 10rpx;
+    color: #6e6d6b;
+}
+
+.goods {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 15rpx;
+    background: #fff;
+    display:flex;
+    justify-content: space-between;
+  }
+  .goodsAbout {
+    width: 100%;
+  }
+  .goods .type {
+    height: 80rpx;
+    justify-content: flex-end;
+  }
+  
+  .goods .goodsTop {
+    justify-content: left;
+    padding: 18rpx 30rpx 35rpx;
+  }
+  
+  .goods .goodsImg {
+    width: 30%;
+    height: 210rpx;
+    border-radius: 10rpx;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .goods .goodsBt {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24rpx 30rpx 35rpx;
+    width: 30%;
+    height: 100rpx;
+    flex-direction: row-reverse;
+  }
+  
+  .goods .goodsBt view {
+    width: 152rpx;
+    height: 52;
+    border-radius: 10rpx;
+    border: 1rpx solid;
+    margin-left: 20rpx;
+  }
+  
+  .goods .goodsBt view.bt1 {
+    border-color: #999999;
+    color: #999999;
+  }
+  
+  .bt2 {
+    background:#42BE9C;
+    border-radius: 5rpx;
+    color:#fff;
+    width:100rpx;
+    margin-right: 10rpx;
+    text-align:center;
+  }
+  .left{
+      padding-right: 44%;
+  }
+
+  .jieduan {
+    width:100%; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+  }
+  
+  .border_bt{
+    border-bottom: 1rpx solid #efefef;
+    margin-bottom: 22rpx;
+    padding: 45rpx 30rpx 35rpx;
+  }
+  .js{
+    display: inline-block;
+  }
+  .left1{
+    padding-right: 75%;
+  }
+  .fw-js{
+    width: 70%;
+    padding:10rpx;
+    display: flex;
+    align-items:center;
+    /* align-items:center; 让view里的内容垂直居中 */
+  }
+  .fuwu {
+      padding:0 25rpx;
+      background:#fff;
+  }

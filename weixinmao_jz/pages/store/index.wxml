@@ -1,0 +1,35 @@
+<view class="container">
+    <view class="top">
+        <view class="bg" style="background-image:url('{{store.bg}}')"></view>
+    </view>
+    <van-row custom-class="action_row">
+        <van-col span="8" custom-class="action_bar" bindtap="toStoreService">
+            <view><van-icon style="font-size:50rpx;color:skyblue" name="todo-list" /></view>
+            <view>预约服务</view>
+        </van-col>
+        <van-col span="8" custom-class="action_bar" bindtap="toStoreComment">
+            <view><van-icon style="font-size:50rpx;color:red" name="comment" /></view>
+            <view>评价</view>
+        </van-col>
+        <van-col span="8" custom-class="action_bar">
+            <view><van-icon style="font-size:50rpx" name="phone" /></view>
+            <view>在线咨询</view>
+        </van-col>
+    </van-row>
+    <view style="background:#f4f4f4">
+        <view class="cu-bar">
+				<view class="action sub-title">
+					<text class="text-xl text-bold text-blue" style="color:#42BE9C">推荐项目</text>
+					<text class="text-ABC text-blue" style="color:#42BE9C">tuijian</text>
+					<!-- last-child选择器-->
+				</view>
+        </view>
+        <view class="tuijianxiangmu">
+            <view class="block" bindtap="toNoteDetail" wx:for="{{store.tuijian}}" wx:key="index">
+                <view class="img"><image mode="aspectFill" src="{{item.src}}"></image></view>
+                <view class="title">{{item.title}}</view>
+                <view class="price">{{item.amount}}元/次</view>
+            </view>
+        </view>
+    </view>
+</view>

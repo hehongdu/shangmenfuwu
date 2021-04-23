@@ -1,0 +1,96 @@
+<view class="container">
+    <view class="goods bg_f">
+        <view class="goodsTop flexs">
+            <view class="goodsImg">
+                <image src="../../resource/images/fuwu1.jpg" class="goodsImg"></image>
+            </view>
+            <view class="goodsAbout flexs">
+                <view>
+                    <view class="tit f14">特色全身油压养生SPA</view>
+                    <view class="cl_6 f12">
+                        <text class="js">90分钟特色全身油压，推油，疏通经络，活血化淤，扫除疲劳</text>
+                    </view>
+                    <view>
+                        <text>￥ 598.00</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="goods bg_f">
+        <view class="item">
+            <van-cell title="服务时间" value="{{currentDateStr}}" arrow-direction="down" />
+        </view>
+        <view class="num flexs">
+          <view class="cl_3 f14">购买数量</view>
+          <view class="right flexs">
+            <text class="cut flexs" bindtap="sutBind">-</text>
+            <input value="{{num}}" bindinput='watchPassWord' type="number"></input>
+            <text class="add flexs cl_f" bindtap="addBind">+</text>
+          </view>
+        </view>
+        <view class="item">
+            <van-cell title="服务技师" value="小白" arrow-direction="down" />
+        </view>
+        <view class="item">
+            <van-cell title="客户地址" value="小白" arrow-direction="down" />
+        </view>
+        <view class="item">
+            <van-cell-group>
+                <van-field value="{{ remark }}" clearable label="备注" placeholder="可以填写其他需求"bind:click-icon="onClickIcon"/>
+            </van-cell-group>
+        </view>
+    </view>
+
+
+
+    <!-- <view class="order">
+        <view class="title">
+        基本信息
+      </view>
+        <view class="list">
+            <view class="item">
+                <input name="name" placeholder="联系人姓名" type="text" value="{{address}}" style="width:90%"></input>
+            </view>
+            <view class="item">
+                <input name="phone" placeholder="联系人电话" type="text" value="{{address}}" style="width:90%"></input>
+            </view>
+            <view class="item">
+                <input name="phone" placeholder="详细地址" type="text" value="{{address}}" style="width:90%"></input>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="list">
+            <view class="item">
+                <view class="selectitem" style="width:100%;">
+                    <textarea name="content" placeholder="留言" style="line-height:normal;"></textarea>
+                </view>
+            </view>
+        </view>
+    </view> -->
+</view>
+
+<!-- 底部预约 -->
+<view class="shopTabbar flexs">
+    <view class="flexs content">
+        <view class="left flexs f12">
+            <view class="flexs pos_r">
+                <navigator class="flexs" hover-class="none" open-type="switchTab" url="/pages/index/index">
+                <text class="f14" style="color:red">¥ <text>890</text></text>
+                </navigator>
+            </view>
+        </view>
+        <view class="right flexs f12">
+            <view class="flexs bt_r cl_f" data-type="2" bindtap="toPayOrder">立即预约</view>
+        </view>
+    </view>
+</view>
+
+<view class="u-tap-btn">
+    <navigator class="u-go-home" openType="switchTab" url="/weixinmao_jz/pages/index/index">
+        <!-- <view class="iconfont fa fa-home"></view> -->
+        <text class="fa fa-home fa-lg tb" style="font-size:52rpx;margin-top:20rpx;"></text>
+    </navigator>
+</view>

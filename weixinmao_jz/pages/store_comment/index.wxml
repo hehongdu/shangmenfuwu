@@ -1,0 +1,46 @@
+<view class="container">
+    <van-sticky>
+        <view class="action_row">
+        <view span="6" class="action_bar">
+            <view>1146</view>
+            <view>全部</view>
+        </view>
+        <view span="6" class="action_bar">
+            <view>1123</view>
+            <view>好评</view>
+        </view>
+        <view span="6" class="action_bar">
+            <view>1123</view>
+            <view>中评</view>
+        </view>
+        <view span="6" class="action_bar">
+            <view>1123</view>
+            <view>差评</view>
+        </view>
+        <view span="6" class="action_bar">
+            <view>5</view>
+            <view>有图</view>
+        </view>
+    </view>
+    </van-sticky>
+    
+    <view class="commentlist">
+        <view class="cu-card dynamic" wx:for="{{commentlist}}">
+            <view class="cu-item shadow">
+                <view class="cu-list menu-avatar">
+                    <view class="cu-item">
+                        <view class="cu-avatar round lg" style="background-image:url({{item.avatar}});"></view>
+                        <view class="content flex-sub">
+                            <view>{{item.nickname}}</view>
+                            <view class="text-gray text-sm flex justify-between">{{item.create_time}}</view>
+                        </view>
+                    </view>
+                </view>  
+                <view class="text-content">{{item.content}}</view>
+                <view class="grid flex-sub padding-lr col-3 grid-square">
+                    <view bindtap="preview" data-src="{{img}}" data-list="{{item.imglist}}" class="bg-img" style="background-image:url({{img}});" wx:for="{{item.imglist}}" wx:for-item="img" wx:key="{{index}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

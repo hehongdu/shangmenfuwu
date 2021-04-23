@@ -1,0 +1,161 @@
+<view class="container">
+    <view class="type-container">
+        <scroll-view class="type-navbar" scrollX="true">
+            <view class="type-box">
+                <view class="beituxuhua" style="background-image:url('{{data.photo}}');"></view>
+                <view class="detail" style="position:relative">
+                    <van-notice-bar background="#42Bbbb" color="#fff" scrollable="{{false}}" text="下单付款后技师会主动联系你哦~~" />
+                    <view class="detail_top">
+                        <image mode="aspectFill" src="{{data.photo}}" class="jsimg"></image>
+                        <view class="detail_text">
+                            <view style="display:flex;justify-content:space-between">{{data.name}}
+                                <view class="flexs">
+                                    <text class="fa fa-star  fa-lg"></text>
+                                    <text class="fa fa-star  fa-lg"></text>
+                                    <text class="fa fa-star  fa-lg"></text>
+                                    <text class="fa fa-star  fa-lg"></text>
+                                    <text class="fa fa-star  fa-lg"></text>
+                                </view>
+                            </view>
+                            <view bindtap="toStore" style="display:flex;align-items:center"><van-icon name="shop" />{{data.store}}></view>
+                            <view><van-icon name="location-o" />{{data.juli}}km</view>
+                        </view>
+                        <view style="position:absolute;right:20rpx;top:220rpx;">
+                            <van-button size="small" color="#42BE9C">点击关注</van-button>
+                        </view>
+                    </view>
+                    <view class="tags">
+                        <van-tag plain  size="large" type="primary" class="tag">
+                            <van-icon name="newspaper-o"/> 头像认证
+                        </van-tag>
+                        <van-tag plain  size="large" type="primary" class="tag">
+                            <van-icon name="user-circle-o" /> 实名认证
+                        </van-tag>
+                        <van-tag plain  size="large" type="primary" class="tag">
+                            <van-icon name="phone-o" /> 手机认证
+                        </van-tag>
+                    </view>
+                    <van-row custom-class="action_row">
+                        <van-col span="8" custom-class="action_bar">
+                            <view>关注人数</view>
+                            <view>5117人</view>
+                        </van-col>
+                        <van-col span="8" custom-class="action_bar">
+                            <view>订单数量</view>
+                            <view>497单</view>
+                        </van-col>
+                        <van-col span="8" custom-class="action_bar">
+                            <view>评价</view>
+                            <view>5.0分</view>
+                        </van-col>
+                    </van-row>
+                </view>     
+            </view>
+        </scroll-view>
+        <view class="about">
+            <scroll-view class="image-group" scroll-x="true">
+                <image mode="aspectFill" bindtap="preview" data-src="{{item}}" data-list="{{data.imglist}}" wx:for="{{data.imglist}}" src="{{item}}"></image>
+            </scroll-view>
+            <view class="about_des">
+                <text class="conts {{isF?'hide':''}}">本人介绍：{{data.about_des}}</text>
+                <text style="display:inline;font-size:20rpx;color:blue" bindtap='zhankai'>{{isF ? '展开' : '收起'}}</text>
+            </view>
+        </view>
+
+
+    </view>
+    <view class="goods bg_f">
+        <van-tabs type="card" style="width:100%">
+            <van-tab title="服务项目">
+                <view style="margin-top:20rpx" wx:for="{{data.fuwulist}}">
+                    <view class="goodsTop flexs" bindtap="toNoteDetail">
+                    <view class="goodsImg">
+                        <image mode="aspectFill" src="{{item.src}}" class="goodsImg"></image>
+                    </view>
+                    <view class="goodsAbout flexs">
+                        <view>
+                            <view class="tit f14">{{item.title}}</view>
+                            <view class="cl_6 f12">
+                                <text class="js">{{item.des}}</text>
+                            </view>
+                            <view class="f14">
+                                <text>￥</text>{{item.amount}}
+                            </view>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <view style="margin-top:20rpx">
+                    <view class="goodsTop flexs" bindtap="toNoteDetail">
+                    <view class="goodsImg">
+                        <image src="../../resource/images/fuwu1.jpg" class="goodsImg"></image>
+                    </view>
+                    <view class="goodsAbout flexs">
+                        <view>
+                            <view class="tit f14">特色全身油压养生SPA</view>
+                            <view class="cl_6 f12">
+                                <text class="js">90分钟特色全身油压，推油，活血化淤，舒筋通骨，扫除疲劳</text>
+                            </view>
+                            <view class="f14">
+                                <text>￥</text>598.00
+                            </view>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <view style="margin-top:20rpx">
+                    <view class="goodsTop flexs" bindtap="toNoteDetail">
+                    <view class="goodsImg">
+                        <image src="../../resource/images/fuwu1.jpg" class="goodsImg"></image>
+                    </view>
+                    <view class="goodsAbout flexs">
+                        <view>
+                            <view class="tit f14">特色全身油压养生SPA</view>
+                            <view class="cl_6 f12">
+                                <text class="js">90分钟特色全身油压，推油，活血化淤，舒筋通骨，扫除疲劳</text>
+                            </view>
+                            <view class="f14">
+                                <text>￥</text>598.00
+                            </view>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="下单须知">
+                <view style="padding:20rpx">
+                    <view>1、需要一件起批或一件代发的客户，申请分销后并联系客服受理通过即可。</view>
+                    <view>2、默认发优速或龙邦，信丰快递，默认快递到不了的地区发邮政小包，需要发顺丰快递的联系客服补运费差价。</view>
+                </view>
+            </van-tab>
+            <van-tab title="精选评价">
+                <view class="cu-bar bg-white solid-bottom">
+				    <view class="action" style="font-weight:bold;">
+					    评价200+
+                    </view>
+                    <view class="action" bindtap="toComment">
+					    查看全部评价 >
+				    </view>
+			    </view>
+                <scroll-view>
+                    <view class="cu-list menu-avatar">
+				        <view class="cu-item" wx:for="{{commentList}}" wx:key="index">
+					    <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+					    <view class="content" style="width:78%">
+						    <view class="text-grey" style="color:#000;font-weight:bold;display:flex;justify-content:space-between"> 
+                                {{item.telephone}}
+                                <view class="text-grey text-xs">{{item.create_time}}</view>
+                            </view>
+						    <view class="text-gray text-sm flex">
+							    <view class="text-cut">
+                                    {{item.content}}								
+                                </view> 
+                            </view>
+					    </view>
+                    </view>
+                </view>
+                </scroll-view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

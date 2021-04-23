@@ -1,0 +1,64 @@
+{
+    "usingComponents": {
+        "van-icon": "@vant/weapp/icon/index",
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "pages": [
+        "weixinmao_jz/pages/index/index",
+        "weixinmao_jz/pages/getuserinfo/index",
+        "weixinmao_jz/pages/user/index",
+        "weixinmao_jz/pages/article/index",
+        "weixinmao_jz/pages/message/index",
+        "weixinmao_jz/pages/search/index",
+        "weixinmao_jz/pages/myorder/index",
+        "weixinmao_jz/pages/notedetail/index",
+        "weixinmao_jz/pages/notelist/index",
+        "weixinmao_jz/pages/serviceorder/index",
+        "weixinmao_jz/pages/bindtel/index",
+        "weixinmao_jz/pages/payorder/index",
+        "weixinmao_jz/pages/project/index",
+        "weixinmao_jz/pages/store/index",
+        "weixinmao_jz/pages/store_comment/index",
+        "weixinmao_jz/pages/store_service/index"
+    ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#42BE9C",
+        "backgroundColor": "#42BE9C",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#6e6d6b",
+        "selectedColor": "#42BE9C",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "box-shadow": "0 0 6px 0",
+        "list": [
+            {
+                "pagePath": "weixinmao_jz/pages/index/index",
+                "text": "首页",
+                "iconPath": "weixinmao_jz/resource/images/nav/home-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/home-on.png"
+            },
+            {
+                "pagePath": "weixinmao_jz/pages/myorder/index",
+                "text": "订单",
+                "iconPath": "weixinmao_jz/resource/images/nav/er-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/er-on.png"
+            },
+            {
+                "pagePath": "weixinmao_jz/pages/user/index",
+                "text": "会员中心",
+                "iconPath": "weixinmao_jz/resource/images/nav/user-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/279.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序内"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
+}

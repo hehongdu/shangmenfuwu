@@ -1,0 +1,53 @@
+<view class="container">
+    <view>
+        <view style="height:90rpx"></view>
+		<view class="box" style="position:fixed;top:0;z-index:99999;">
+			<view class="cu-bar search bg-white" style="font-size:22rpx">
+                <view class="action" bindtap="sort">
+					<text style="font-size:22rpx">{{sortText}}</text>
+					<text class="cuIcon-triangledownfill"></text>
+                </view>
+                <view class="action" style="margin-left:20rpx">
+					<text>服务商</text>
+					<text class="cuIcon-triangledownfill"></text>
+                </view>
+                <view class="action" style="margin-left:20rpx">
+					<text>筛选</text>
+					<text class="cuIcon-triangledownfill"></text>
+				</view>
+				<view class="search-form radius">
+					<text class="cuIcon-search"></text>
+					<input adjust-position="false" type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+				</view>
+			</view>
+		</view>
+        <scroll-view>
+            <view class="cu-list menu-avatar">
+                <view class="cu-item" style="height:260rpx;position:relative" wx:for="{{jishilist}}" wx:key bindtap="toProject">
+                    <view class="cu-avatar radius lg" style="background-image:url({{item.imgurl}});width:220rpx;height:220rpx;"></view>
+                    <view class="content" style="height: 240rpx;left:270rpx;">
+                        <view style="display:flex;justify-content:space-between">
+                            <view>{{item.name}}</view>
+                            <view style="font-size:20rpx;display:flex;align-items:center;justify-content:center"><van-icon name="shop-o" />{{item.store}} ></view>
+                        </view>
+                        <view class="jieduan" style="font-size:20rpx">服务地址:{{item.address}}</view>
+                        <view class="jieduan" style="font-size:20rpx">服务技能：{{item.speactial}}</view>
+                        <view style="position:absolute;bottom:0;right:0">
+                            <van-button type="danger" size="small">可预约</van-button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+        <van-popup show="{{ sortPopup }}" position="top" custom-style="height: 50%;position:absolute;top:100rpx;" bind:close="sortOnClose">
+            <van-radio-group value="{{ sortKey }}">
+                <van-cell-group>
+                    <van-cell title="{{item.value}}" clickable data-key="{{item.key}}" data-value="{{item.value}}" wx:for="{{sortList}}" wx:key="index" bindtap="sortOnClick">
+                        <van-radio slot="right-icon" name="{{item.key}}" />
+                    </van-cell>
+                </van-cell-group>
+            </van-radio-group>
+        </van-popup>
+    </view>
+</view>

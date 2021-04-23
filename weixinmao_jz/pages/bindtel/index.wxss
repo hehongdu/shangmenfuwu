@@ -1,0 +1,150 @@
+page {
+    background: linear-gradient(#3274e5,#b7d0fc);
+}
+
+.container {
+    width: 750rpx;
+    height: 650rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .intro {
+    font-size: .8rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 30rpx;
+    margin-bottom: 120rpx;
+}
+
+.register {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.register .item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2rpx solid #bfbfbf;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    padding-left: 40rpx;
+}
+
+.register .item text {
+    color: #747474;
+}
+
+.register .item input {
+    width: 400rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-left: 20rpx;
+}
+
+.register .item button {
+    width: 200rpx;
+    font-size: .7rem;
+    height: 80rpx;
+    line-height: 80rpx;
+    align-self: center;
+}
+
+.btnuser {
+    width: 500rpx;
+    height: 450rpx;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rpx;
+    align-content: space-between;
+}
+
+.btnuser view:nth-child(1) {
+    font-weight: bold;
+    color: #3274e5;
+    font-size: 1rem;
+    margin-bottom: 20rpx;
+}
+
+.btnuser button {
+    width: 350rpx;
+    align-self: center;
+    background: #44b549;
+    color: #FFF;
+    font-size: .9rem;
+    margin-top: 20rpx;
+}
+
+.btnuser image {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 180rpx;
+}
+
+.weixinmao-msg-userinfo {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2001;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.weixinmao-content-userinfo {
+    width: 550rpx;
+    height: 350rpx;
+    z-index: 4001;
+    background: #FFF;
+    align-self: center;
+    border-radius: 5rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weixinmao-content-userinfo .userinfo-title {
+    align-self: left;
+    margin-left: 40rpx;
+    font-size: 1.2rem;
+    margin-top: 40rpx;
+}
+
+.weixinmao-content-userinfo .userinfo-content {
+    align-self: left;
+    margin-left: 40rpx;
+    font-size: .9rem;
+    margin-top: 20rpx;
+}
+
+.userinfo-button {
+    display: flex;
+    flex-direction: row;
+    width: 400rpx;
+    margin-left: 200rpx;
+    align-items: baseline;
+    padding-bottom: 20rpx;
+}
+
+.userinfo-button button {
+    background: #FFF;
+    font-size: .8rem;
+}
+
+.userinfo-button button:nth-child(2) {
+    color: #d65408;
+}
+
+button::after {
+    border: none;
+}

@@ -1,0 +1,351 @@
+.container {
+    min-height: 100%;
+}
+
+.container .header {
+    width: 750rpx;
+    height: 120rpx;
+    background: #42BE9C;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pic {
+    width: 380rpx;
+    height: 350rpx;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 200rpx;
+    top: 40rpx;
+}
+
+.pic image {
+    width: 140rpx;
+    height: 140rpx;
+    border: 7rpx solid #FFF;
+    border-radius: 140rpx;
+}
+
+.pic view {
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 380rpx;
+    text-align: center;
+    color: #000;
+    font-size: .8rem;
+}
+
+.container .order {
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .order .title {
+    font-size: .8rem;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    background: #FFF;
+    padding-left: 20rpx;
+    border-bottom: 1rpx solid #efefef;
+    font-weight: 600;
+}
+
+.container .order .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #FFF;
+    padding: 20rpx;
+    text-indent: 20rpx;
+    font-size: .8rem;
+}
+
+.container .order .content .item {
+    width: 250rpx;
+    text-align: center;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item text {
+    padding: 10rpx 15rpx;
+    border-radius: 3rpx;
+    margin-right: 5rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    color: #77af6e;
+    background: #f7f5f6;
+}
+
+.container .order .content .item image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.container .list {
+    width: 750rpx;
+    background: #FFF;
+}
+
+.container .list .item {
+    padding-top: 25rpx;
+    padding-bottom: 25rpx;
+    font-size: .8rem;
+    border-bottom: 1rpx solid #efefef;
+    padding-left: 20rpx;
+    color: #747474;
+}
+
+.list button {
+    width: 600rpx;
+    background: #62c7b5;
+    color: #FFF;
+    font-size: .8rem;
+    margin-top: 10rpx;
+}
+
+.weixinmao-float {
+    height: 150rpx;
+}
+
+.weixinmao-foot {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    background: #42BE9C;
+}
+
+.weixinmao-foot button {
+    color: #FFF;
+    align-self: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: .9rem;
+    display: flex;
+    width: 220rpx;
+    border-radius: 0rpx;
+    border: 1rpx solid #42BE9C;
+    flex-direction: row;
+    background: #42BE9C;
+}
+
+button::after {
+    border: none;
+}
+
+.weixinmao-foot view image {
+    width: 70rpx;
+    height: 70rpx;
+    align-self: center;
+}
+.flexs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goods {
+    margin: 10rpx 0 16rpx;
+    background: #fff;
+}
+.goods .goodsTop {
+    justify-content: left;
+    padding: 0 30rpx 35rpx;
+}
+  
+.goods .goodsTop .goodsImg {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 10rpx;
+    background: center center /cover;
+    overflow: hidden;
+    margin-right: 30rpx;
+}
+  
+.goods .goodsTop .goodsAbout {
+    align-items: flex-start;
+    flex: 1;
+    justify-content: space-between;
+    height: 160rpx;
+}
+  
+.goods .goodsTop .goodsAbout .left {
+    width: 350rpx;
+}
+  
+.goods .goodsTop .goodsAbout .left .tit {
+    margin-bottom: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 40rpx;
+}
+
+
+.goods .item {
+    width: 100%;
+    align-self: center;
+}
+
+.goods .item .name {
+    width: 35%;
+    color: #2d2d2d;
+}
+
+.goods .item .selectitem {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #808080;
+    font-size: .9rem;
+}
+
+.goods .num {
+    width: 100%;
+    border-top: 1rpx solid #e5e5e5;
+    justify-content: space-between;
+    background: #fff;
+    padding: 25rpx 30rpx;
+}
+.goods .num .add {
+  width: 57rpx;
+  height: 50rpx;
+  font-size: 32rpx;
+  border: 1rpx solid #e5e5e5;
+}
+.goods .num .cut {
+    width: 57rpx;
+    height: 50rpx;
+    font-size: 32rpx;
+    border: 1rpx solid #e5e5e5;
+  }
+.goods .num input {
+    width: 98rpx;
+    text-align: center;
+    height: 50rpx;
+    font-size: 28rpx;
+    border: 1rpx solid #e5e5e5;
+}
+.select_box{
+    background: #fff;
+    width: 80%;
+    position: relative;
+}
+.select{
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    border:1px solid #efefef;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx 0 32rpx;
+}
+.select_text{
+    flex: 1;
+}
+.select_img{
+    width: 28rpx;
+    height: 28rpx;
+    display: block;
+    transition:transform 0.3s;
+}
+.select_img_rotate{
+    transform:rotate(180deg); 
+}
+.option_box{
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border:1px solid #efefef;
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+}
+.option{
+    display: block;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx 10rpx 10rpx 32rpx;
+}
+/* 底部加购 */
+
+.shopTabbar {
+    width: 100%;
+    height: 98rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+    border-top: 1rpx solid #e5e5e5;
+    box-shadow: 0px -6rpx 6rpx rgba(229, 229, 229, 0.2); /*阴影出现在元素上方*/
+  }
+  
+  .shopTabbar .content {
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    flex: 1;
+  }
+  
+  .shopTabbar .content .left view {
+    width: 120rpx;
+  }
+  
+  .shopTabbar .content .left view image {
+    width: 40rpx;
+    margin: 8rpx 0;
+  }
+  
+  .shopTabbar .content .left view,
+  .shopTabbar .content .left view navigator
+   {
+    flex-direction: column;
+  }
+  
+  .shopTabbar .content .left view.flexs .num {
+    background: red;
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 100%;
+    top: 0;
+    right: 24rpx;
+  }
+  
+  .shopTabbar .content .right {
+    width: 561rpx;
+    border: 1rpx solid #42Be9C;
+    border-radius: 35rpx;
+    height: 70rpx;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .shopTabbar .content .right view {
+    flex: 1;
+    height: 100%;
+  }
+  
+  .shopTabbar .content .right view.bt_r {
+    background: #42Be9C;
+  }

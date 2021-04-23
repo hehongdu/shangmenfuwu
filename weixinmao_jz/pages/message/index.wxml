@@ -1,0 +1,47 @@
+<!--pages/msgCenter/msgCenter.wxml-->
+<view class="no_msg" wx:if="{{msgList.length==0}}">
+  <image src="../../resource/img/noResult.png" class="zwxx" mode="widthFix"></image>
+  <view>暂无消息</view>
+</view>
+
+<view class="list_main" wx:else>
+  <view class="edit_top flexs">
+    <view class="top_in flexs bg_f8">
+      <view class="flexs" hidden="{{choseshow}}" bindtap="chosebind">
+        编辑
+      </view>
+      <view class="flexs" wx:if="{{choseshow}}" bindtap="changeEdit">
+        完成
+      </view>
+    </view>
+  </view>
+
+  <view class="list_down" style="margin-bottom:{{choseshow?'240rpx':''}}">
+    <view class="list_row clear flexs" wx:for="{{msgList}}" wx:key="id" data-index="{{index}}" bindtap="{{choseshow?'checkself':''}}">
+      <view class="row_l flexs" wx:if="{{choseshow}}">
+        <image src="{{item.checked?'../../resource/img/checked_on.jpg':'../../resource/img/checked.jpg'}}"></image>
+      </view>
+
+      <view class="row_r ">
+        <view class="right">
+          <view class="content">{{item.content}}</view>
+          <view class="time">2020-08-28 9:35</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部操作 -->
+<view class="down_tab" wx:if="{{choseshow}}">
+  <view class="list_top flexs">
+    <view class="flexs">
+      <view class="flexs" bindtap="choseall">
+        <image src="{{choseall?'../../resource/img/checked_on.jpg':'../../resource/img/checkedall.jpg'}}" mode="widthFix"></image>
+        全选
+      </view>
+    </view>
+    <view class="flexs delect_bt" bindtap="delect">
+      删除
+    </view>
+  </view>
+</view>
