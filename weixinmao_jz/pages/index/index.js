@@ -1,4 +1,5 @@
 require("../../resource/js/qqmap-wx-jssdk.min.js"), require("../../resource/js/config.js");
+const $api = require('../../api/index.js').API;
 
 var a = getApp();
 Page({
@@ -77,6 +78,7 @@ Page({
         httpSrc: "http://www.fzshop.com/uploads/banner/",
     },
     onLoad: function(t) {
+        console.log($api )
         var a = this;
         if (wx.setNavigationBarTitle({
             title: "首页"

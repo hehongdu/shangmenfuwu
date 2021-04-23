@@ -3,7 +3,6 @@ App({
     onShow: function() {},
     onHide: function() {},
     onError: function(o) {},
-    util: require("we7/resource/js/util.js"),
     tabBar: {
         color: "#123",
         selectedColor: "#1ba9ba",
