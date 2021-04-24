@@ -1,60 +1,5 @@
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": false,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": false,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "enableEngineNative": false,
-    "bundle": false,
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./"
-      }
-    ],
-    "minifyWXSS": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.14.1",
-  "appid": "wx365cba5b249d5370",
-  "projectname": "%E5%AE%B6%E6%94%BF",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -124,6 +69,36 @@
         {
           "name": "weixinmao_jz/pages/store_service/index",
           "pathName": "weixinmao_jz/pages/store_service/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/shop/shopPage/index",
+          "pathName": "weixinmao_jz/pages/shop/shopPage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/shop/project/index",
+          "pathName": "weixinmao_jz/pages/shop/project/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/shop/project/project",
+          "pathName": "weixinmao_jz/pages/shop/project/project",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/shop/addProject/index",
+          "pathName": "weixinmao_jz/pages/shop/addProject/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/shop/users/index",
+          "pathName": "weixinmao_jz/pages/shop/users/index",
           "scene": null
         }
       ]

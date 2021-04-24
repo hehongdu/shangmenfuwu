@@ -1,0 +1,145 @@
+<view class="container">
+    <view class="header">
+        <!-- <view hidden="{{isuser}}">
+            <view class="pic">
+                <image src="../../resource/images/jia3.jpg"></image>
+                <view>了解</view>
+            </view>
+        </view> -->
+        <view hidden="{{!isuser}}">
+            <view class="pic">
+                <image src="{{userinfo.wxInfo.avatarUrl}}"></image>
+                <view>{{userinfo.wxInfo.nickName}}</view>
+            </view>
+        </view>
+        <view hidden="{{!isuser}}">
+            <view class="pic">
+                <image src="{{userinfo.wxInfo.avatarUrl}}"></image>
+                <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo" style="background:{{intro.maincolor}};color:#FFF;font-size:.7rem;">点击登录</button>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="mainDown">
+        <view class="content1 bf_f clear bg_f">
+            <view class="tit flexs">
+                <view class="f14">今日收益</view>
+                <!-- <view class="cl_6 f12" bindtap="toMyOrder" data-url="/pages/myOrder/myOrder">
+                    所有订单
+                    <image src="../../resource/img/icon_right.png" mode="widthFix"></image>
+                </view> -->
+            </view>
+            <view class="down flexs">
+              <view class='f16'>
+                <view class='f16_txt'>
+                  <view class='f16Num'>￥2000</view>
+                  <text class='f16Txt'>营业额</text> 
+                </view>
+                <view class='f16_img'></view>
+              </view>
+              <view class='f16'>
+                <view class='f16_txt'>
+                  <view class='f16Num'>70</view>
+                  <text class='f16Txt'>单数</text> 
+                </view>
+                <view class='f16_img'></view>
+              </view>
+                <!-- <view bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/iconM1.png" mode="widthFix"></image>
+                    <text>待支付</text>
+                </view>
+                <view bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/iconM2.png" mode="widthFix"></image>
+                    <text>进行中</text>
+                </view>
+                <view bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/iconM3.png" mode="widthFix"></image>
+                    <text>已完成</text>
+                </view>
+                <view bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/iconM4.png" mode="widthFix"></image>
+                    <text>已取消</text>
+                </view> -->
+            </view>
+        </view>
+        <view class='content3'>
+          <view class="content3_name">
+            <text class='content3Name'>
+              基础功能
+            </text>
+          </view>
+          <view class='basis'>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+            <view class='basisChild'>
+              <view class='basisImg'></view>
+              <text class='basisTxt'>服务项目</text>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="content1 contents bf_f clear bg_f" bindtap="toMessage">
+            <view class="tit1 flexs">
+                <view class="f14">最新消息</view>
+                <view class="cl_6 f12" bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/icon_right.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="content1 contents bf_f clear bg_f">
+            <view class="tit1 tits flexs">
+                <view class="f12">
+                    <text class="fa fa-phone fa-lg tb"></text>15632993366
+                </view>
+                <view class="cl_6 f12" bindtap="goPage" data-url="/pages/myOrder/myOrder">
+                    <image src="../../resource/img/icon_right.png" mode="widthFix"></image>
+                </view>
+            </view>
+            <view class="tit1 titss flexs">
+                <view class="f12"><text class="fa fa-map-marker fa-lg tb"></text>24小时上门服务</view>
+            </view>
+        </view>
+        <view class="signOut f30 flexs bg_f" wx:if="{{!is_login}}" bindtap="unLogin">退出登录</view> -->
+    </view>
+</view>
+
+<!-- <view class="weixinmao-msg" hidden="{{showmsg}}">
+    <view class="weixinmao-content">
+        <view class="title" style="background:{{intro.maincolor}}">
+            <view></view>
+            <view>绑定手机号</view>
+            <view bindtap="closemsg">关闭</view>
+        </view>
+        <form bindsubmit="saveuserinfo">
+            <view class="content">
+                <view class="item">
+                    <input class="inputlist" name="name" placeholder="请输入您的姓名" type="text" value="{{user.name}}"></input>
+                </view>
+                <view class="item">
+                    <input class="inputlist" name="tel" placeholder="请输入您的手机号" type="text" value="{{user.tel}}"></input>
+                </view>
+                <view class="item tops">
+                    <button class="bindtel" formType="submit" style="background:{{intro.maincolor}}">立即绑定</button>
+                </view>
+            </view>
+        </form>
+    </view> -->
+<!-- </view> -->

@@ -1,0 +1,61 @@
+<!--weixinmao_jz/pages/shop/addProject/index.wxml-->
+<view class='container'>
+  <view class='header' style='height:{{headerHeight}}px;width:100%;'>
+    <view class='header_icon' style='margin-top:{{h}}px'><text>服务项目</text></view>
+  </view>
+
+  <view class='black' style='top:{{h}}px'><van-icon name="arrow-left"size='25px' /></view>
+
+  <view class='content'>
+    <view class='txt'>
+      <text>基本信息</text>
+    </view>
+    <view class="addData">
+      <van-cell-group>
+        <van-field
+          value="{{ value }}"
+          placeholder="请填写项目名称"
+          border="{{ true }}"
+          bind:change="onChange"
+          label='项目名称'
+          required="{{true}}"
+          size='large'
+        />
+        <van-field
+          value="{{ value }}"
+          border="{{ true}}"
+          bind:change="onChange"
+          label='项目价格'
+          required="{{true}}"
+          size='large'
+          type="number"
+        />
+        <view class='listed'>
+          <view class="listed_txt"><text>是否上架</text></view>
+          <van-switch checked="{{ checked }}"
+            style="height:60rpx !important;"
+          bind:change="onanChange" />
+        </view>
+        <van-field
+          value="{{ value }}"
+          border="{{ true}}"
+          bind:change="onChange"
+          placeholder="请填写订单数量"
+          label='订单数量'
+          size='30px'
+          type="number"
+        />
+        <van-field
+          value="{{ value }}"
+          border="{{ true}}"
+          bind:change="onChange"
+          placeholder="请填写项目时间"
+          label='项目时间'
+          size='30px'
+          type="number"
+        />
+      </van-cell-group>
+
+    </view>
+  </view>
+</view>

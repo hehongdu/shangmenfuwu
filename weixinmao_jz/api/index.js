@@ -1,4 +1,4 @@
-const requestGet = require('../libs/axios.js').requestGet; // get 请求
+  const requestGet = require('../libs/axios.js').requestGet; // get 请求
 const requestPost = require('../libs/axios.js').requestPost; // post 请求
 
 

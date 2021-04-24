@@ -1,0 +1,38 @@
+<!--weixinmao_jz/pages/shop/users/index.wxml-->
+<view class="container"> 
+  <view class="header">
+    <view class='header_top' style='height:{{headerHeight}}px;'>
+      <view class='black' style='margin-top:{{h}}px;'>
+        <van-icon name="arrow-left" size='24px' />
+      </view>
+      <view class='header_name' style='margin-top:{{h}}px;'>
+        <text>用户管理</text>
+      </view>
+    </view>
+
+    <view class='headerContent'>
+      <view class='headerTxt'>
+        <view class='header_txt'>
+          <view>
+          <text>1000</text>
+          </view>
+          <view>
+            <text>今日新增</text>
+          </view>
+        </view>
+      
+      </view>
+      <view class='headerTxt'>
+        <view class='header_txt'>
+          <view>
+          <text>1000</text>
+          </view>
+          <view>
+            <text>今日新增</text>
+          </view>
+        </view>
+      
+      </view>
+    </view>
+  </view>
+</view>

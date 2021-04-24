@@ -1,0 +1,36 @@
+/* weixinmao_jz/pages/shop/addProject/index.wxss */
+.header{
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  background:red;
+}
+
+.black{
+  position: fixed;
+}
+
+.txt{
+  width:100% ;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.txt text{
+  margin-left:20rpx;
+}
+
+.listed{
+  width: 100%;
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:white ;
+}
+
+.listed_txt{
+  margin-left: 30rpx;
+}
