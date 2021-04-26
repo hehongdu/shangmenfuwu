@@ -1,0 +1,26 @@
+<!--weixinmao_jz/pages/shop/project/index.wxml-->
+<!-- <text>weixinmao_jz/pages/shop/project/index.wxml</text> -->
+<view class='container'>
+  <view class='header' style='height:{{headerHeight}}px;width:100%;'>
+    <view class='header_icon' style='margin-top:{{h}}px'><text>服务项目</text></view>
+  </view>
+
+  <view class='black' style='top:{{h}}px'><van-icon name="arrow-left"size='25px' /></view>
+  
+  <view class='content'>
+    <view class='projectList' wx:for="{{list}}">
+      <view class='projectImg'></view>
+      <view class='projectTxt'>
+        <view class='project_name'><text>结肠调理</text></view>
+        <view class='money'>
+          <view><text>30元</text></view>
+          <view><text>200fenzhong</text></view>
+        </view>
+        <view class='project_describe'><text>功能介绍</text></view>
+      </view>
+    </view>
+  </view>
+  <view class='add' bindtap='addlist'>
+    <view><text>添加项目</text></view>
+  </view>
+</view>

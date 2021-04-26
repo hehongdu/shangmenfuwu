@@ -1,7 +1,33 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
     "setting": {
         "urlCheck": true,
@@ -44,27 +70,66 @@
         ],
         "minifyWXSS": true
     },
-    "compileType": "miniprogram",
-    "libVersion": "2.14.1",
-    "appid": "wx23d828fee4efee90",
-    "projectname": "%E5%AE%B6%E6%94%BF",
-    "debugOptions": {
-        "hidedInDevtools": []
+    "gamePlugin": {
+      "list": []
     },
-    "scripts": {},
-    "isGameTourist": false,
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
-    "condition": {
-        "plugin": {
-            "list": []
+    "miniprogram": {
+      "list": [
+        {
+          "name": "weixinmao_jz/pages/index/index",
+          "pathName": "weixinmao_jz/pages/index/index",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "list": []
+        {
+          "name": "weixinmao_jz/pages/notelist/index",
+          "pathName": "weixinmao_jz/pages/notelist/index",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "weixinmao_jz/pages/notedetail/index",
+          "pathName": "weixinmao_jz/pages/notedetail/index",
+          "query": "",
+          "scene": null
         },
+        {
+          "name": "weixinmao_jz/pages/payorder/index",
+          "pathName": "weixinmao_jz/pages/payorder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/serviceorder/index",
+          "pathName": "weixinmao_jz/pages/serviceorder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/project/index",
+          "pathName": "weixinmao_jz/pages/project/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/index/index",
+          "pathName": "weixinmao_jz/pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/store/index",
+          "pathName": "weixinmao_jz/pages/store/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "weixinmao_jz/pages/store_comment/index",
+          "pathName": "weixinmao_jz/pages/store_comment/index",
+          "query": "",
+          "scene": null
+        },
+<<<<<<< HEAD
         "miniprogram": {
             "list": [
                 {
@@ -128,6 +193,14 @@
                     "scene": null
                 }
             ]
+=======
+        {
+          "name": "weixinmao_jz/pages/store_service/index",
+          "pathName": "weixinmao_jz/pages/store_service/index",
+          "scene": null
+>>>>>>> 2cbbed8fcb57543d91fd9bf7d33de545c83bfb82
         }
+      ]
     }
+  }
 }
