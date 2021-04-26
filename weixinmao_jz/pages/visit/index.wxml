@@ -1,0 +1,132 @@
+<div class="content {{iPhoneX?'x':''}} {{status.isShowMask?'mask':''}}">
+    <view catchtap="close" class="mask" wx:if="{{status.isShowMask}}"></view>
+    <view class="filter">
+        <view class="store">
+            <view catchtap="switchStore" class="head {{storeNames?'active':''}}">
+                <text>服务商</text>
+                <icon class="{{status.isShowStoreOption?'up':'down'}}"></icon>
+            </view>
+            <view class="main" wx:if="{{storeList&&storeList.length>0&&status.isShowStoreOption}}">
+                <view class="list">
+                    <view bindtap="setStoreIds" class="item {{item.isChecked?'checked':''}}" data-id="{{item.id}}" wx:for="{{storeList}}" wx:key="id">
+                        <icon class="icon"></icon>
+                        <text class="name">{{item.name}}</text>
+                    </view>
+                </view>
+                <view class="foot">
+                    <view catchtap="reset" class="left">重置</view>
+                    <view catchtap="confirmStoreIds" class="right">确定</view>
+                </view>
+            </view>
+        </view>
+        <view class="where">
+            <view catchtap="switchWhere" class="head {{pageParam.whereName?'active':''}}">
+                <text>筛选</text>
+                <icon class="{{status.isShowWhereOption?'up':'down'}}"></icon>
+            </view>
+            <view class="main" wx:if="{{status.isShowWhereOption}}">
+                <view class="list">
+                    <view bindtap="setGender" class="item {{pageParam.gender==2||pageParam.gender==-1?'checked':''}}" data-id="2">
+              女性技师
+            </view>
+                    <view bindtap="setGender" class="item {{pageParam.gender==1||pageParam.gender==-1?'checked':''}}" data-id="1">
+              男性技师
+            </view>
+                    <view bindtap="setWhere" class="item {{(pageParam.tempWhere&1)==1?'checked':''}}" data-id="1">
+              手机认证
+            </view>
+                    <view bindtap="setWhere" class="item {{(pageParam.tempWhere&2)==2?'checked':''}}" data-id="2">
+              头像认证
+            </view>
+                    <view bindtap="setWhere" class="item {{(pageParam.tempWhere&4)==4?'checked':''}}" data-id="4">
+              实名认证
+            </view>
+                    <view bindtap="setWhere" class="item {{(pageParam.tempWhere&8)==8?'checked':''}}" data-id="8">
+              多张照片
+            </view>
+                </view>
+                <view class="foot">
+                    <view catchtap="reset" class="left">重置</view>
+                    <view catchtap="confirmWhere" class="right">确定</view>
+                </view>
+            </view>
+        </view>
+        <view class="sort">
+            <view catchtap="switchSort" class="head {{pageParam.orderTypeName?'active':''}}">
+                <text>排序</text>
+                <icon class="{{status.isShowSortOption?'up':'down'}}"></icon>
+            </view>
+            <view class="main" wx:if="{{status.isShowSortOption}}">
+                <view class="list">
+                    <view bindtap="setOrderType" class="item {{pageParam.orderType==1?'checked':''}}" data-id="1">
+              系统推荐
+            </view>
+                    <view bindtap="setOrderType" class="item {{pageParam.orderType==2?'checked':''}}" data-id="2">
+              销量最高
+            </view>
+                    <view bindtap="setOrderType" class="item {{pageParam.orderType==3?'checked':''}}" data-id="3">
+              距离最近
+            </view>
+                    <view bindtap="setOrderType" class="item {{pageParam.orderType==4?'checked':''}}" data-id="4">
+              最新加入
+            </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <block wx:if="{{pageResult&&pageResult.list&&pageResult.list.length>0}}">
+        <view class="technician-list">
+            <view bindtap="showTechnicianDetail" class="item" data-id="{{item.id}}" wx:for="{{pageResult.list}}" wx:key="id">
+                <view class="photo">
+                    <image class="img" lazyLoad="{{true}}" src="{{item.avatar}}"></image>
+                    <view class="far" wx:if="{{item.isFar}}">距离较远</view>
+                </view>
+                <view class="info">
+                    <view class="row h30">
+                        <view class="name">{{item.nickname}}</view>
+                        <text class="title">{{item.professionalTitle}}</text>
+                        <view class="star">
+                            <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="star" wx:key="*this">
+                                <icon wx:if="{{item.starLevel>=star}}"></icon>
+                                <icon class="gray" wx:else></icon>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="row h30">
+                        <text class="mobile {{item.memberId==0?'gray':''}}">手机认证</text>
+                        <text class="avatar {{item.isAvatarAuth==0?'gray':''}}">头像认证</text>
+                        <text class="realname {{item.isRealnameAuth==0?'gray':''}}">实名认证</text>
+                    </view>
+                    <view class="row h40">
+                        <view class="order">{{item.orderQuantityDesc}}</view>
+                        <view class="distance">{{item.distance}}KM</view>
+                        <view class="state {{item.className||''}}">{{item.currentStateDescription}}</view>
+                    </view>
+                    <view class="row h30">
+                        <view catchtap="showStoreDetail" class="store" data-id="{{item.storeId}}">
+                {{item.storeName}}
+              </view>
+                    </view>
+                    <view class="row h40">
+                        <view class="body" wx:if="{{item.tag&&item.tag.length>0}}">
+                            <view class="part" wx:if="{{idx<3}}" wx:for="{{item.tag}}" wx:for-index="idx" wx:key="*this">{{item}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="login-mask" wx:if="{{pageParam&&pageParam.page>1&&!isLogin}}">
+            <view class="box">
+                <view class="form">
+                    <view class="words">
+                        <text>登录后可查看技师照片</text>
+                        <text>登录后可以和技师在线聊天</text>
+                    </view>
+                    <view bindtap="showMemberLogin" class="login">立即登录</view>
+                    <view bindtap="hideMemberLogin" class="close"></view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="cu-load {{isLoad?'loading':'over'}}" style="background: linear-gradient(0deg, #D434EC, #F8606D);"></view>
+</div>

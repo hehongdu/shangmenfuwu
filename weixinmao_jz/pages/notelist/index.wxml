@@ -23,31 +23,26 @@
             </view>
         </scroll-view>
     </view>
-    <view class="goods bg_f" wx:key="id" wx:for="{{fuwulist}}">
-        <view class="goodsImg">
-            <image class="img" src="{{item.src}}"></image>
-        </view>
-        <view class="fw-js">
-                <view class="goodsAbout">
-                    <view class="tit f14">{{item.title}}</view>
-                    <view class="cl_6 f12" style="height:100rpx;display:flex;justify-content:space-between;align-items:center">
-                        <view style="display:flex;justify-content:flex-start;align-items:center">
-                            <view style="display:flex;justify-content:space-between;align-items:center">
-                                <van-icon name="gold-coin-o" /> {{item.amount}}元/次
-                            </view>
-                            <view style="margin-left:10rpx;display:flex;justify-content:space-around;align-items:center">
-                                <van-icon name="clock-o" /> {{item.time}}分钟
-
-                            </view>
-                            <view style="margin-left:10rpx;display:flex;justify-content:space-between;align-items:center">
-                                <van-icon name="home-o" />{{item.juli}} 
-
-                            </view>
-                        </view>      
-                        <view bindtap="toNoteDetail" class="flexs bt2">预约</view> 
+    <view class="fuwulist">
+        <view class="list">
+                <!-- 服务项目 -->
+                <view class="block" wx:for="{{fuwulist}}" key="{{index}}" bindtap="toNoteDetail">
+                    <view class="left">
+                        <image style="border-radius:10rpx" mode="aspectFill" src="{{item.src}}" alt=""/>
                     </view>
-                    <view class="cl_6 f12 jieduan" style="margin-top:10rpx">功能介绍：{{item.des}}</view>
-            </view>
+                    <view class="right">
+                        <view class="title">{{item.title}}</view>
+                        <view class="amount">
+                            <van-icon style="color:red;font-size:28rpx;margin-right:4rpx" name="gold-coin-o" />
+                            {{item.amount}}/次 <van-icon style="font-size:28rpx;margin:0 4rpx" name="clock-o" />{{item.time}}分钟</view>
+                        <view class="des jieduan">功能介绍：{{item.des}}</view>
+                        <view class="time">
+                            预计最快{{item.time}}分钟上门
+                            <button class="btn">预约</button>
+                        </view>
+                    </view>
+                </view>
         </view>
     </view>
+    <view class="cu-load bg-blue {{isLoad?'loading':'over'}}" style="background: linear-gradient(0deg, #D434EC, #F8606D);"></view>
 </view>

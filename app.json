@@ -13,7 +13,7 @@
         "weixinmao_jz/pages/myorder/index",
         "weixinmao_jz/pages/notedetail/index",
         "weixinmao_jz/pages/notelist/index",
-        "weixinmao_jz/pages/serviceorder/index",
+        "weixinmao_jz/pages/visit/index",
         "weixinmao_jz/pages/bindtel/index",
         "weixinmao_jz/pages/payorder/index",
         "weixinmao_jz/pages/project/index",
@@ -24,8 +24,8 @@
     "window": {
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "",
-        "navigationBarBackgroundColor": "#42BE9C",
-        "backgroundColor": "#42BE9C",
+        "navigationBarBackgroundColor": "#D434EC",
+        "backgroundColor": "#fff",
         "enablePullDownRefresh": false
     },
     "tabBar": {
@@ -37,21 +37,27 @@
         "list": [
             {
                 "pagePath": "weixinmao_jz/pages/index/index",
-                "text": "首页",
+                "text": "服务",
                 "iconPath": "weixinmao_jz/resource/images/nav/home-off.png",
                 "selectedIconPath": "weixinmao_jz/resource/images/nav/home-on.png"
             },
             {
+                "pagePath": "weixinmao_jz/pages/visit/index",
+                "text": "技师",
+                "iconPath": "weixinmao_jz/resource/images/nav/jishi-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/jishi-on.png"
+            },
+            {
                 "pagePath": "weixinmao_jz/pages/myorder/index",
                 "text": "订单",
-                "iconPath": "weixinmao_jz/resource/images/nav/er-off.png",
-                "selectedIconPath": "weixinmao_jz/resource/images/nav/er-on.png"
+                "iconPath": "weixinmao_jz/resource/images/nav/order-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/order-on.png"
             },
             {
                 "pagePath": "weixinmao_jz/pages/user/index",
-                "text": "会员中心",
-                "iconPath": "weixinmao_jz/resource/images/nav/user-off.png",
-                "selectedIconPath": "weixinmao_jz/resource/images/nav/279.png"
+                "text": "我的",
+                "iconPath": "weixinmao_jz/resource/images/nav/jishi-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/user-on.png"
             }
         ]
     },

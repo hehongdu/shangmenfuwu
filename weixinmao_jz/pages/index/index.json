@@ -2,6 +2,7 @@
     "navigationBarTitleText": "",
     "usingComponents": {
         "van-notice-bar": "@vant/weapp/notice-bar/index",
-        "van-button": "@vant/weapp/button/index"
+        "van-button": "@vant/weapp/button/index",
+        "van-rate": "@vant/weapp/rate/index"
     }
 }

@@ -4,7 +4,7 @@
         "ignore": []
     },
     "setting": {
-        "urlCheck": false,
+        "urlCheck": true,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -92,8 +92,8 @@
                     "scene": null
                 },
                 {
-                    "name": "weixinmao_jz/pages/serviceorder/index",
-                    "pathName": "weixinmao_jz/pages/serviceorder/index",
+                    "name": "weixinmao_jz/pages/visit/index",
+                    "pathName": "weixinmao_jz/pages/visit/index",
                     "query": "",
                     "scene": null
                 },
@@ -124,6 +124,7 @@
                 {
                     "name": "weixinmao_jz/pages/store_service/index",
                     "pathName": "weixinmao_jz/pages/store_service/index",
+                    "query": "",
                     "scene": null
                 }
             ]

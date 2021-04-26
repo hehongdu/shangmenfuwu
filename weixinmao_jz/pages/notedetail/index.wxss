@@ -13,11 +13,86 @@
     height: 88rpx;
     background-color: #fff;
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tag {
+  width:calc(100% / 6 - 10rpx);
+  height:50rpx;
+  margin-right:10rpx;
+  margin-top:20rpx;
+  background:#f4f4f4;
+  color:#999;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-radius:10rpx
+}
 
 #baozhang .van-cell__title {
   flex: none;
 }
 
+#baozhang .van-cell__value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.guarantee {
+  float: left;
+  width: 100%;
+  height: 70rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  margin-top:10rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guarantee .rzsj {
+  float: left;
+  width: 144rpx;
+  height: 54rpx;
+  background: url("https://oss.angemo.com/images/app/custom/icon/icon_rzsj.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.guarantee .werfy {
+  float: left;
+  width: 164rpx;
+  height: 54rpx;
+  background: url("https://oss.angemo.com/images/app/custom/icon/icon_wewfy.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.guarantee .wfwqet {
+  float: left;
+  width: 174rpx;
+  height: 54rpx;
+  background: url("https://oss.angemo.com/images/app/custom/icon/icon_wfwqet.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.guarantee .sybp {
+  float: left;
+  width: 144rpx;
+  height: 54rpx;
+  background: url("https://oss.angemo.com/images/app/custom/icon/icon_sybp.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.guarantee .bmycfw {
+  float: left;
+  width: 174rpx;
+  height: 54rpx;
+  background: url("https://oss.angemo.com/images/app/custom/icon/icon_bmycfw.png") no-repeat 50%;
+  background-size: cover;
+}
 .title {
   font-size:30rpx;
   font-weight: 600;
@@ -113,6 +188,501 @@
     background: #fff;
   }
   
+
+.data {
+    margin-top: 10rpx;
+    background-color: #fff;
+}
+
+.data,.data .head {
+    float: left;
+    width: 100%;
+}
+
+.data .head {
+    height: 80rpx;
+    border-bottom: 2rpx solid #eee;
+}
+
+.data .head .item {
+    float: left;
+    width: 250rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #666;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.data .head .item.active {
+    background-image:-webkit-linear-gradient(180deg, #D434EC, #F8606D);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    position: relative;
+}
+
+.data .head .item.active:after {
+    float: left;
+    width: 190rpx;
+    height: 6rpx;
+    background: linear-gradient(0deg, #D434EC, #F8606D);
+    position: absolute;
+    left: 30rpx;
+    bottom: -1rpx;
+    border-radius: 3rpx;
+    content: "";
+}
+
+.data .main {
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.data .main,.data .main .technician {
+    float: left;
+    width: 100%;
+}
+
+.data .main .technician .item {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #eee;
+}
+
+.data .main .technician .item .left {
+    float: left;
+    width: 220rpx;
+    position: relative;
+}
+
+.data .main .technician .item .left .photo {
+    float: left;
+    width: 100%;
+    height: 220rpx;
+    border-radius: 40rpx;
+    box-shadow: 0 0 6rpx 0 hsla(0,0%,40%,.28);
+}
+
+.data .main .technician .item .left .far {
+    float: left;
+    width: 220rpx;
+    height: 220rpx;
+    line-height: 220rpx;
+    border-radius: 30rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(51,51,51,.44);
+    text-align: center;
+    color: #fff;
+    font-size: 26rpx;
+}
+
+.data .main .technician .item .left .state {
+    float: left;
+    width: 140rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    background: #e7e5e5;
+    border-radius: 20px;
+    color: #666;
+    font-size: 26rpx;
+    color: #fff;
+    text-align: center;
+    margin-left: 50rpx;
+    margin-top: 20rpx;
+}
+
+.data .main .technician .item .left .state1 {
+    background: #e7e5e5;
+    color: #666;
+}
+
+.data .main .technician .item .left .state2 {
+    background: #9f50f3;
+    color: #fff;
+}
+
+.data .main .technician .item .left .state3 {
+    background: #e7e5e5;
+    color: #666;
+}
+
+.data .main .technician .item .right {
+    float: right;
+    width: 440rpx;
+    height: 220rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data .main .technician .item .right .top {
+    float: left;
+    width: 100%;
+    height: 30rpx;
+}
+
+.data .main .technician .item .right .top .name {
+    float: left;
+    width: 140rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.data .main .technician .item .right .top .icon {
+    float: left;
+    height: 30rpx;
+}
+
+.data .main .technician .item .right .top .icon .title {
+    float: left;
+    width: 132rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #e9560c;
+    font-size: 20rpx;
+    text-align: center;
+    position: relative;
+}
+
+.data .main .technician .item .right .top .icon .title:after {
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 2rpx solid #e9560c;
+    border-radius: 15rpx;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+
+.data .main .technician .item .right .first {
+    float: left;
+    width: 100%;
+}
+
+.data .main .technician .item .right .first .mobile {
+    float: left;
+    width: 140rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    text-align: left;
+    background: url("https://oss.angemo.com/images/app/custom/icon/mobile_auth.png") no-repeat 0;
+    background-size: 16rpx 22rpx;
+    padding-left: 21rpx;
+    box-sizing: border-box;
+}
+
+.data .main .technician .item .right .first .mobile.gray {
+    background: url("https://oss.angemo.com/images/app/custom/icon/mobile_auth_gray.png") no-repeat 0;
+    background-size: 16rpx 22rpx;
+}
+
+.data .main .technician .item .right .first .avatar {
+    float: left;
+    width: 140rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    color: #666;
+    text-align: left;
+    background: url("https://oss.angemo.com/images/app/custom/icon/avatar_auth.png") no-repeat 0;
+    background-size: 23rpx 27rpx;
+    padding-left: 28rpx;
+    box-sizing: border-box;
+}
+
+.data .main .technician .item .right .first .avatar.gray {
+    background: url("https://oss.angemo.com/images/app/custom/icon/avatar_auth_gray.png") no-repeat 0;
+    background-size: 23rpx 27rpx;
+}
+
+.data .main .technician .item .right .second {
+    float: left;
+    width: 100%;
+}
+
+.data .main .technician .item .right .second .order {
+    float: left;
+    width: 140rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    background: url("https://oss.angemo.com/images/app/custom/product/icon_order.png") no-repeat 0;
+    background-size: 20rpx 24rpx;
+    color: #f208fd;
+    font-size: 24rpx;
+}
+
+.data .main .technician .item .right .second .distance {
+    float: left;
+    width: 140rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding-left: 28rpx;
+    box-sizing: border-box;
+    background: url("https://oss.angemo.com/images/app/custom/icon/icon_distance.png") no-repeat 0;
+    background-size: 18rpx 24rpx;
+    color: #f208fd;
+    font-size: 24rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.data .main .technician .item .right .bottom {
+    float: left;
+    width: 100%;
+    height: 90rpx;
+    overflow: hidden;
+}
+
+.data .main .technician .item .right .bottom .tag {
+    float: left;
+    width: 120rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    background-color: #eee;
+    color: #666;
+    font-size: 24rpx;
+    text-align: center;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
+}
+
+.data .main .technician .item .right .bottom .tag:nth-child(-n+3) {
+    margin-top: 0;
+}
+
+.data .main .technician .item .check {
+    float: left;
+    width: 40rpx;
+    height: 240rpx;
+    background: url("https://oss.angemo.com/images/app/custom/product/check.png") no-repeat 50%;
+    background-size: 40rpx 40rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.data .main .technician .item .check.checked {
+    float: left;
+    width: 40rpx;
+    height: 240rpx;
+    background: url("https://oss.angemo.com/images/app/custom/product/checked.png") no-repeat 50%;
+    background-size: 40rpx 40rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.data .main .technician .item:nth-child(even) {
+    float: right;
+}
+
+.data .main .technician .item:last-child {
+    border-bottom: none;
+}
+
+.data .main .introduce {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.data .main .introduce dl {
+    float: left;
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.data .main .introduce dl dt {
+    float: left;
+    width: 100%;
+    height: 48rpx;
+    line-height: 48rpx;
+    font-size: 26rpx;
+    color: #333;
+    font-weight: 700;
+}
+
+.data .main .introduce dl dd {
+    float: left;
+    width: 100%;
+    margin-top: 20rpx;
+    position: relative;
+}
+
+.data .main .introduce dl dd .table {
+    float: left;
+    width: 100%;
+}
+
+.data .main .introduce dl dd .table p {
+    float: left;
+    width: 50%;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: #333;
+    font-size: 22rpx;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.data .main .introduce dl dd .table p.w25 {
+    width: 25%;
+    text-align: center;
+}
+
+.data .main .introduce dl dd .table span {
+    float: left;
+    width: 50%;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: #333;
+    font-size: 22rpx;
+    margin-bottom: 0;
+}
+
+.data .main .introduce dl dd .table span.w25 {
+    width: 25%;
+    text-align: center;
+}
+
+.data .main .introduce dl dd .text {
+    float: left;
+    width: 100%;
+    line-height: 48rpx;
+    font-size: 22rpx;
+    text-align: left;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+.data .main .introduce dl dd .text:after {
+    border: none;
+}
+
+.data .main .introduce dl dd textarea {
+    float: left;
+    width: 100%;
+    height: 96rpx;
+    line-height: 48rpx;
+    font-size: 28rpx;
+    border: 2rpx solid #ccc;
+    box-sizing: border-box;
+}
+
+.data .main .introduce dl dd .p {
+    float: left;
+    width: 100%;
+    line-height: 48rpx;
+    word-break: break-all;
+    font-size: 24rpx;
+}
+
+.data .main .introduce dl dd .img {
+    float: left;
+    width: 100%;
+}
+
+.data .main .introduce dl.all {
+    max-height: none;
+    overflow: auto;
+}
+
+.data .main .notice {
+    float: left;
+    width: 100%;
+    padding: 20rpx 0;
+}
+
+.data .main .notice .text {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    font-size: 24rpx;
+    line-height: 48rpx;
+}
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.bar,.bar .book {
+    float: left;
+    width: 100%;
+    height: 98rpx;
+    line-height: 98rpx;
+    background-color: #9f50f3;
+}
+
+.bar .book {
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.bar .merchant {
+    float: left;
+    width: 86rpx;
+    height: 98rpx;
+    position: fixed;
+    left: 30rpx;
+    bottom: 0;
+    background: url("https://oss.angemo.com/images/app/custom/technician/icon_merchant.png") no-repeat 50%;
+    background-size: 86rpx 86rpx;
+}
+
+.bar .chat,.bar .contact {
+    float: left;
+    width: 86rpx;
+    height: 98rpx;
+    position: fixed;
+    left: 130rpx;
+    bottom: 0;
+    background: url("https://oss.angemo.com/images/app/custom/technician/icon_chat.png") no-repeat 50%;
+    background-size: 86rpx 86rpx;
+}
+
+.bar .home {
+    float: left;
+    width: 162rpx;
+    height: 162rpx;
+    position: fixed;
+    right: 12rpx;
+    bottom: 460rpx;
+    background: url("https://oss.angemo.com/images/app/custom/common/icon_back.png") no-repeat 50%;
+    background-size: 162rpx 162rpx;
+}
   
 
   
@@ -232,8 +802,7 @@
 
 .shopTabbar .content .right {
   width: 561rpx;
-  border: 1rpx solid #42Be9C;
-  border-radius: 35rpx;
+  border-radius: 15rpx;
   height: 70rpx;
   color: #fff;
   overflow: hidden;
@@ -245,5 +814,6 @@
 }
 
 .shopTabbar .content .right view.bt_r {
-  background: #42Be9C;
+  background: linear-gradient(0deg, #D434EC, #F8606D);
+  border: 0;
 }

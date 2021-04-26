@@ -4,6 +4,7 @@ const $api = require('../../api/index.js').API;
 var a = getApp();
 Page({
     data: {
+        active:1,
         // 轮播图
         banner: [
             'https://api.ericgu178.com//uploads/20210409/c5d3777895c068a653f272a827780a2c.jpg',
@@ -81,7 +82,7 @@ Page({
         console.log($api )
         var a = this;
         if (wx.setNavigationBarTitle({
-            title: "首页"
+            title: "服务首页"
         }));
     },
     toSearch() {
@@ -92,105 +93,17 @@ Page({
     onShow: function(e) {
         
     },
-    
-    toLogin: function(a) {
-        wx.getStorageSync("companyid") > 0 ? wx.navigateTo({
-            url: "/weixinmao_jz/pages/companylogin/index"
-        }) : wx.navigateTo({
-            url: "/weixinmao_jz/pages/login/index"
-        });
-    },
-    toList: function(a) {
-        var e = a.currentTarget.id;
-        wx.navigateTo({
-            url: "/weixinmao_jz/pages/article/index?id=" + e
-        });
-    },
-    toProject: function(a) {
-        var e = a.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: "/weixinmao_jz/pages/project/index?id=" + e
-        });
-    },
-    toNotemessage: function(a) {
-        var e = a.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: "/weixinmao_jz/pages/notemessage/index?id=" + e
-        });
-    },
+
     toNotelist: function() {
         wx.navigateTo({
             url: "/weixinmao_jz/pages/notelist/index"
         });
     },
-    toMyorder: function() {
-        wx.switchTab({
-            url: "/weixinmao_jz/pages/myorder/index"
-        });
-    },
-    tabClick: function(e) {
-        var t = this, o = e.currentTarget.id;
-        a.util.request({
-            url: "entry/wxapp/changenotelist",
-            data: {
-                ordertype: o
-            },
-            success: function(a) {
-                a.data.message.errno || t.setData({
-                    notelist: a.data.data.notelist,
-                    ordertype: o
-                });
-            }
-        }), t.setData({
-            ordertype: o
-        });
-    },
-    toNewHouse: function(a) {
-        wx.navigateTo({
-            url: "/weixinmao_jz/pages/newhouselist/index"
-        });
-    },
-    toServiceorder: function() {
-        wx.navigateTo({
-            url: "/weixinmao_jz/pages/serviceorder/index"
-        });
-    },
-    toGuestHouse: function(a) {
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/guesthouselist/index"
-        });
-    },
-    toOldHouse: function(a) {
-        wx.switchTab({
-            url: "/weixinmao_house/pages/oldhouselist/index"
-        });
-    },
-    toletHouseDetail: function(a) {
-        var e = a.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/lethousedetail/index?id=" + e
-        });
-    },
-    toAgentlist: function(a) {
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/agentlist/index"
-        });
-    },
-    toArticle: function(a) {
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/salelist/index"
-        });
-    },
-    toActive: function(a) {
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/active/index"
-        });
-    },
-    toNewHouseDetail: function(a) {
-        var e = a.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: "/weixinmao_house/pages/newhousedetail/index?id=" + e
-        });
+    click(e) {
+        const {active} = e.currentTarget.dataset;
+        this.setData({
+            active:active
+        })
     },
     toNoteDetail: function(a) {
         var e = a.currentTarget.dataset.id;

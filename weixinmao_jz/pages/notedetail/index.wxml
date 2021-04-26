@@ -15,39 +15,77 @@
                     <view>
                         <view class="title">{{data.title}}</view>
                         <view class="money">¥ <text style="font-size:50rpx;">{{data.amount}}</text></view>
-                        <view class="cl_6 f12">
-                            <text class="js">{{data.des}}</text>
+                        <view class="tags">
+                            <view class="tag" wx:for="{{data.des}}">{{item}}</view>
                         </view>
                     </view>
                 </view>
             </view>
         </view>
-        <view>
-            <van-cell id="baozhang" title="保障" arrow-direction="down">
-                <van-icon name="gold-coin" /> <text style="font-size:20rpx">未服务全额退</text>
-                <van-icon name="umbrella-circle" /> <text style="font-size:20rpx">爽约包赔 </text>
-                <van-icon name="like" /> <text style="font-size:20rpx">不满意重服务 </text>
-                <van-icon name="fire" /> <text style="font-size:20rpx">全场保障</text>
-            </van-cell>
-            <van-cell title="预约时间" is-link value="{{currentDateStr}}" bindtap="chooseTime" arrow-direction="down" />
-        </view>
-
-        <van-popup show="{{ popupshow }}" position="bottom" custom-style="height: 50%;" bind:close="onClose">
-            <van-datetime-picker type="datetime" bind:cancel="onClose" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:confirm="onConfirm"/>
-        </van-popup>
+        <view class="guarantee">
+                <view class="rzsj"></view>
+                <view class="wfwqet"></view>
+                <view class="sybp"></view>
+                <view class="bmycfw"></view>
+            </view>
     </view>
-    <view class="goods bg_f" wx:key="id">
-        <view class="tit f14">
-            <image src="../../resource/img/sg.png" class="tbimg"></image>服务详情
-        </view>
-        <view class="fw-js">
-            <view class="cl_6 f12">
-                <rich-text class='content' nodes="{{data.detail}}"></rich-text>                
+    <view class="data">
+            <view class="head">
+                <view bindtap="switchTab" class="item {{tabIndex==1?'active':''}}" data-index="1">服务人员</view>
+                <view bindtap="switchTab" class="item {{tabIndex==2?'active':''}}" data-index="2">项目详情</view>
+                <view bindtap="switchTab" class="item {{tabIndex==3?'active':''}}" data-index="3">预订须知</view>
+            </view>
+            <view class="main">
+                <block wx:if="{{tabIndex==1}}">
+                    <view class="technician" wx:if="{{storeTechnicianList&&storeTechnicianList.length>0}}">
+                        <view bindtap="setTechnician" class="item" data-id="{{item.id}}" wx:for="{{storeTechnicianList}}" wx:key="id">
+                            <view class="left" data-id="{{item.id}}">
+                                <block wx:if="{{item.avatar}}">
+                                    <image class="photo" lazyLoad="{{true}}" mode="aspectFill" src="{{item.avatar}}"></image>
+                                    <view class="far" wx:if="{{item.isFar}}">距离较远</view>
+                                </block>
+                                <view class="state {{item.className}}" wx:if="{{storeProduct.storeIsBookable}}">{{item.currentStateDescription}}</view>
+                            </view>
+                            <view class="right">
+                                <view bindtap="showTechnicianDetail" class="top" data-id="{{item.id}}">
+                                    <text class="name">{{item.nickname}}</text>
+                                    <view class="icon">
+                                        <text class="title">{{item.professionalTitle}}</text>
+                                    </view>
+                                </view>
+                                <view class="first">
+                                    <text class="mobile {{item.memberId==0?'gray':''}}">手机认证</text>
+                                    <text class="avatar {{item.isAvatarAuth==0?'gray':''}}">头像认证</text>
+                                </view>
+                                <view class="second">
+                                    <view class="order">{{item.orderQuantityDesc}}单</view>
+                                    <view class="distance">{{item.distance}}KM</view>
+                                </view>
+                                <view class="bottom">
+                                    <block wx:if="{{item.tag&&item.tag.length>0}}">
+                                        <text class="tag" wx:for="{{item.tag}}" wx:for-item="t">{{t}}</text>
+                                    </block>
+                                </view>
+                            </view>
+                            <view class="check {{item.checked?'checked':''}}"></view>
+                        </view>
+                    </view>
+                </block>
+                <view class="introduce" wx:elif="{{tabIndex==2}}" style="margin-bottom:80rpx">
+                    <dl wx:if="{{data.introduce&&data.introduce.length>0}}">
+                        <dd wx:for="{{data.introduce}}" wx:key="id">
+                            <text class="p" wx:if="{{item.type==='text'}}">{{item.content}}</text>
+                            <image class="img" height="auto" lazyLoad="{{true}}" mode="widthFix" src="{{item.content}}" width="100%" wx:if="{{item.type==='image'}}"></image>
+                        </dd>
+                    </dl>
+                </view>
+                <view class="notice" wx:else style="margin-bottom:80rpx">
+                    <text class="text">{{data.orderNotice||'暂无预订须知'}}</text>
+                </view>
             </view>
         </view>
-    </view>
     <!-- 底部预约 -->
-    <view class="shopTabbar flexs">
+    <view class="shopTabbar">
         <view class="flexs content">
             <view class="left flexs f12">
                 <view class="flexs pos_r">
@@ -64,10 +102,4 @@
             </view>
         </view>
     </view>
-</view>
-<view class="u-tap-btn">
-    <navigator class="u-go-home" openType="switchTab" url="/weixinmao_jz/pages/index/index">
-        <!-- <view class="iconfont fa fa-home"></view> -->
-        <text class="fa fa-home fa-lg tb" style="font-size:52rpx;margin-top:20rpx;"></text>
-    </navigator>
 </view>

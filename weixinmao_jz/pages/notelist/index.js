@@ -4,6 +4,7 @@ var e = getApp();
 
 Page({
     data: {
+        isLoad:true,
         id: 0,
         ordertype: 1,
         fuwulist:[{
@@ -36,15 +37,13 @@ Page({
             juli:'一公里'
         },]
     },
-    onLoad: function(t) {
-        var a = this;
-        if (wx.setNavigationBarTitle({
+    onLoad: function(t) {        
+        wx.setNavigationBarTitle({
             title: "服务项目"
-        }), a.data.id > 0) a.data.id; else {
-            t.id;
-            a.data.id = t.id;
-        }
-        var n = wx.getStorageSync("userInfo");
+        })
+        this.setData({
+            isLoad:false
+        })
     },
     onShow: function(e) {
         wx.getLocation({
@@ -91,113 +90,13 @@ Page({
     },
     onReady: function() {},
     tabClick: function(t) {
-        var a = this;
-        this.checkuser({
-            doServices: function() {
-                var n = t.currentTarget.id, o = wx.getStorageSync("userInfo");
-                e.util.request({
-                    url: "entry/wxapp/myorder",
-                    data: {
-                        ordertype: n,
-                        sessionid: o.sessionid,
-                        uid: o.memberInfo.uid
-                    },
-                    success: function(e) {
-                        e.data.message.errno || a.setData({
-                            list: e.data.data.list,
-                            ordertype: n
-                        });
-                    }
-                });
-            }
-        });
-    },
-    delOrder: function(t) {
-        var a = this;
-        this.checkuser({
-            doServices: function() {
-                var n = t.currentTarget.dataset.id, o = wx.getStorageSync("userInfo");
-                wx.showModal({
-                    title: "订单取消",
-                    content: "确认取消订单？",
-                    success: function(t) {
-                        t.confirm && e.util.request({
-                            url: "entry/wxapp/delOrder",
-                            data: {
-                                id: n,
-                                sessionid: o.sessionid,
-                                uid: o.memberInfo.uid
-                            },
-                            success: function(e) {
-                                console.log(e), a.onLoad();
-                            },
-                            fail: function(e) {
-                                console.log(e);
-                            }
-                        });
-                    }
-                });
-            }
-        });
-    },
-    RepayOrder: function(t) {
-        var a = this;
-        this.checkuser({
-            doServices: function() {
-                var n = t.currentTarget.dataset.id, o = wx.getStorageSync("userInfo");
-                wx.showModal({
-                    title: "订单支付",
-                    content: "是否确认订单？",
-                    success: function(t) {
-                        t.confirm && e.util.request({
-                            url: "entry/wxapp/repay",
-                            data: {
-                                id: n,
-                                sessionid: o.sessionid,
-                                uid: o.memberInfo.uid
-                            },
-                            success: function(e) {
-                                e.data && e.data.data && wx.requestPayment({
-                                    timeStamp: e.data.data.timeStamp,
-                                    nonceStr: e.data.data.nonceStr,
-                                    package: e.data.data.package,
-                                    signType: "MD5",
-                                    paySign: e.data.data.paySign,
-                                    success: function(e) {
-                                        a.onLoad();
-                                    },
-                                    fail: function(e) {}
-                                });
-                            },
-                            fail: function(e) {
-                                console.log(e);
-                            }
-                        });
-                    }
-                });
-            }
-        });
+        
     },
     onHide: function() {},
     onUnload: function() {},
     onPullDownRefresh: function() {},
     onReachBottom: function() {},
     onShareAppMessage: function() {},
-    checkuser: function(t) {
-        var a = this, t = t, n = wx.getStorageSync("userInfo");
-        return console.log(n), n ? n.memberInfo.uid ? void e.util.request({
-            url: "entry/wxapp/checkuserinfo",
-            data: {
-                sessionid: n.sessionid,
-                uid: n.memberInfo.uid
-            },
-            success: function(e) {
-                console.log("payyyy"), 0 == e.data.data.error ? t.doServices() : 2 == e.data.data.error && t.doServices();
-            }
-        }) : (e.util.getUserInfo(), !1) : (e.util.getUserInfo(function(e) {
-            a.InitPage();
-        }), !1);
-    },
     toNoteDetail: function(a) {
         var e = a.currentTarget.dataset.id;
         wx.navigateTo({
