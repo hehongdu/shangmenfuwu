@@ -1,3 +1,4 @@
+
 {
   "description": "项目配置文件",
   "packOptions": {
@@ -129,9 +130,6 @@
           "query": "",
           "scene": null
         },
-<<<<<<< HEAD
-        "miniprogram": {
-            "list": [
                 {
                     "name": "weixinmao_jz/pages/index/index",
                     "pathName": "weixinmao_jz/pages/index/index",
@@ -191,16 +189,13 @@
                     "pathName": "weixinmao_jz/pages/store_service/index",
                     "query": "",
                     "scene": null
-                }
+                },
+                {
+                    "name": "weixinmao_jz/pages/store_service/index",
+                    "pathName": "weixinmao_jz/pages/store_service/index",
+                    "scene": null
+                  }
             ]
-=======
-        {
-          "name": "weixinmao_jz/pages/store_service/index",
-          "pathName": "weixinmao_jz/pages/store_service/index",
-          "scene": null
->>>>>>> 2cbbed8fcb57543d91fd9bf7d33de545c83bfb82
-        }
-      ]
     }
   }
 }
