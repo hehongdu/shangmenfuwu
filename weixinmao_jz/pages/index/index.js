@@ -4,6 +4,7 @@ const $api = require('../../api/index.js').API;
 var a = getApp();
 Page({
     data: {
+        area:{},
         active:1,
         // 轮播图
         banner: [
@@ -79,11 +80,9 @@ Page({
         httpSrc: "http://www.fzshop.com/uploads/banner/",
     },
     onLoad: function(t) {
-        console.log($api )
-        var a = this;
-        if (wx.setNavigationBarTitle({
+        wx.setNavigationBarTitle({
             title: "服务首页"
-        }));
+        })
     },
     toSearch() {
         wx.navigateTo({
@@ -91,7 +90,22 @@ Page({
         })
     },
     onShow: function(e) {
-        
+        let area = wx.getStorageSync('area')
+        this.setData({
+            area
+        })
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+              selected: 0
+            })
+        }
+    },
+
+    toCitys() {
+        wx.navigateTo({
+          url: '/weixinmao_jz/pages/city/city',
+        })
     },
 
     toNotelist: function() {

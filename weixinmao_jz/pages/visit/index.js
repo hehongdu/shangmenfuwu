@@ -1381,7 +1381,15 @@ Page({
             inputValue: a.detail.value
         }), t.onShow();
     },
-    onShow: function() {},
+    onShow: function() {
+        // tabbar
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+              selected: 1
+            })
+        }
+    },
     onHide: function() {},
     onUnload: function() {},
     // 下拉刷新

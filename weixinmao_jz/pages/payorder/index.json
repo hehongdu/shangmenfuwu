@@ -1,4 +1,5 @@
 {
+    "navigationBarTitleText": "下单页面",
     "usingComponents": {
         "van-button": "@vant/weapp/button/index",
         "van-cell": "@vant/weapp/cell/index",

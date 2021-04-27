@@ -1,37 +1,10 @@
-
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": false,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": false,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
     },
     "setting": {
-        "urlCheck": true,
+        "urlCheck": false,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -56,80 +29,106 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
-        "bundle": false,
-        "useIsolateContext": true,
-        "useCompilerModule": true,
-        "userConfirmedUseCompilerModuleSwitch": false,
-        "userConfirmedBundleSwitch": false,
-        "packNpmManually": true,
-        "packNpmRelationList": [
-            {
-                "packageJsonPath": "./package.json",
-                "miniprogramNpmDistDir": "./"
-            }
-        ],
-        "minifyWXSS": true
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "weixinmao_jz/pages/index/index",
-          "pathName": "weixinmao_jz/pages/index/index",
-          "query": "",
-          "scene": null
+        "setting": {
+            "urlCheck": true,
+            "es6": true,
+            "enhance": true,
+            "postcss": true,
+            "preloadBackgroundData": false,
+            "minified": true,
+            "newFeature": false,
+            "coverView": true,
+            "nodeModules": false,
+            "autoAudits": false,
+            "showShadowRootInWxmlPanel": true,
+            "scopeDataCheck": false,
+            "uglifyFileName": false,
+            "checkInvalidKey": true,
+            "checkSiteMap": true,
+            "uploadWithSourceMap": true,
+            "compileHotReLoad": false,
+            "useMultiFrameRuntime": true,
+            "useApiHook": true,
+            "useApiHostProcess": false,
+            "babelSetting": {
+                "ignore": [],
+                "disablePlugins": [],
+                "outputPath": ""
+            },
+            "enableEngineNative": false,
+            "bundle": false,
+            "useIsolateContext": true,
+            "useCompilerModule": true,
+            "userConfirmedUseCompilerModuleSwitch": false,
+            "userConfirmedBundleSwitch": false,
+            "packNpmManually": true,
+            "packNpmRelationList": [
+                {
+                    "packageJsonPath": "./package.json",
+                    "miniprogramNpmDistDir": "./"
+                }
+            ],
+            "minifyWXSS": true
         },
-        {
-          "name": "weixinmao_jz/pages/notelist/index",
-          "pathName": "weixinmao_jz/pages/notelist/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "weixinmao_jz/pages/notedetail/index",
-          "pathName": "weixinmao_jz/pages/notedetail/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/payorder/index",
-          "pathName": "weixinmao_jz/pages/payorder/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/serviceorder/index",
-          "pathName": "weixinmao_jz/pages/serviceorder/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/project/index",
-          "pathName": "weixinmao_jz/pages/project/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/index/index",
-          "pathName": "weixinmao_jz/pages/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/store/index",
-          "pathName": "weixinmao_jz/pages/store/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "weixinmao_jz/pages/store_comment/index",
-          "pathName": "weixinmao_jz/pages/store_comment/index",
-          "query": "",
-          "scene": null
-        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "weixinmao_jz/pages/index/index",
+                    "pathName": "weixinmao_jz/pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/notelist/index",
+                    "pathName": "weixinmao_jz/pages/notelist/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/notedetail/index",
+                    "pathName": "weixinmao_jz/pages/notedetail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/payorder/index",
+                    "pathName": "weixinmao_jz/pages/payorder/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/serviceorder/index",
+                    "pathName": "weixinmao_jz/pages/serviceorder/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/project/index",
+                    "pathName": "weixinmao_jz/pages/project/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/index/index",
+                    "pathName": "weixinmao_jz/pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/store/index",
+                    "pathName": "weixinmao_jz/pages/store/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/store_comment/index",
+                    "pathName": "weixinmao_jz/pages/store_comment/index",
+                    "query": "",
+                    "scene": null
+                },
                 {
                     "name": "weixinmao_jz/pages/index/index",
                     "pathName": "weixinmao_jz/pages/index/index",
@@ -194,8 +193,89 @@
                     "name": "weixinmao_jz/pages/store_service/index",
                     "pathName": "weixinmao_jz/pages/store_service/index",
                     "scene": null
-                  }
+                }
             ]
+        }
+    },
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "weixinmao_jz/pages/index/index",
+                    "pathName": "weixinmao_jz/pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/notelist/index",
+                    "pathName": "weixinmao_jz/pages/notelist/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/notedetail/index",
+                    "pathName": "weixinmao_jz/pages/notedetail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/payorder/index",
+                    "pathName": "weixinmao_jz/pages/payorder/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/visit/index",
+                    "pathName": "weixinmao_jz/pages/visit/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/project/index",
+                    "pathName": "weixinmao_jz/pages/project/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/index/index",
+                    "pathName": "weixinmao_jz/pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/store/index",
+                    "pathName": "weixinmao_jz/pages/store/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/store_comment/index",
+                    "pathName": "weixinmao_jz/pages/store_comment/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/store_service/index",
+                    "pathName": "weixinmao_jz/pages/store_service/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "weixinmao_jz/pages/city/city",
+                    "pathName": "weixinmao_jz/pages/city/city",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
     }
-  }
 }

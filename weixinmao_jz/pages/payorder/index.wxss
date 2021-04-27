@@ -1,351 +1,251 @@
-.container {
-    min-height: 100%;
+page {
+    background-color: #f0f0f0;
+    overflow-x: hidden;
 }
 
-.container .header {
-    width: 750rpx;
-    height: 120rpx;
-    background: #42BE9C;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+page .content {
+    padding: 30rpx 20rpx 156rpx;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
 }
 
-.pic {
-    width: 380rpx;
-    height: 350rpx;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    left: 200rpx;
-    top: 40rpx;
-}
-
-.pic image {
-    width: 140rpx;
-    height: 140rpx;
-    border: 7rpx solid #FFF;
-    border-radius: 140rpx;
-}
-
-.pic view {
-    height: 60rpx;
-    line-height: 60rpx;
-    width: 380rpx;
-    text-align: center;
-    color: #000;
-    font-size: .8rem;
-}
-
-.container .order {
-    width: 750rpx;
-    display: flex;
-    flex-direction: column;
-}
-
-.container .order .title {
-    font-size: .8rem;
-    padding-top: 20rpx;
-    padding-bottom: 20rpx;
-    background: #FFF;
-    padding-left: 20rpx;
-    border-bottom: 1rpx solid #efefef;
-    font-weight: 600;
-}
-
-.container .order .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: #FFF;
-    padding: 20rpx;
-    text-indent: 20rpx;
-    font-size: .8rem;
-}
-
-.container .order .content .item {
-    width: 250rpx;
-    text-align: center;
-    font-size: .8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.item text {
-    padding: 10rpx 15rpx;
-    border-radius: 3rpx;
-    margin-right: 5rpx;
-    height: 20rpx;
-    line-height: 20rpx;
-    color: #77af6e;
-    background: #f7f5f6;
-}
-
-.container .order .content .item image {
-    width: 100rpx;
-    height: 100rpx;
-}
-
-.container .list {
-    width: 750rpx;
-    background: #FFF;
-}
-
-.container .list .item {
-    padding-top: 25rpx;
-    padding-bottom: 25rpx;
-    font-size: .8rem;
-    border-bottom: 1rpx solid #efefef;
-    padding-left: 20rpx;
-    color: #747474;
-}
-
-.list button {
-    width: 600rpx;
-    background: #62c7b5;
-    color: #FFF;
-    font-size: .8rem;
-    margin-top: 10rpx;
-}
-
-.weixinmao-float {
-    height: 150rpx;
-}
-
-.weixinmao-foot {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
-    background: #42BE9C;
-}
-
-.weixinmao-foot button {
-    color: #FFF;
-    align-self: center;
-    height: 100rpx;
-    line-height: 100rpx;
-    font-size: .9rem;
-    display: flex;
-    width: 220rpx;
-    border-radius: 0rpx;
-    border: 1rpx solid #42BE9C;
-    flex-direction: row;
-    background: #42BE9C;
-}
-
-button::after {
-    border: none;
-}
-
-.weixinmao-foot view image {
-    width: 70rpx;
-    height: 70rpx;
-    align-self: center;
-}
-.flexs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.goods {
-    margin: 10rpx 0 16rpx;
+page .content .box {
+    width: 710rpx;
     background: #fff;
-}
-.goods .goodsTop {
-    justify-content: left;
-    padding: 0 30rpx 35rpx;
-}
-  
-.goods .goodsTop .goodsImg {
-    width: 160rpx;
-    height: 160rpx;
-    border-radius: 10rpx;
-    background: center center /cover;
+    border-radius: 20rpx;
     overflow: hidden;
-    margin-right: 30rpx;
-}
-  
-.goods .goodsTop .goodsAbout {
-    align-items: flex-start;
-    flex: 1;
-    justify-content: space-between;
-    height: 160rpx;
-}
-  
-.goods .goodsTop .goodsAbout .left {
-    width: 350rpx;
-}
-  
-.goods .goodsTop .goodsAbout .left .tit {
+    box-sizing: border-box;
     margin-bottom: 20rpx;
+}
+
+page .content .box .line {
+    height: 98rpx;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+page .content .box .line label {
+    color: #000;
+    font-size: 30rpx;
+}
+
+page .content .box .line .info {
+    flex: 1;
+}
+
+page .content .box .line .info span {
+    color: #999;
+    font-size: 28rpx;
+}
+
+page .content .box .line .info .technician {
+    color: #333;
+    font-size: 28rpx;
+    justify-content: flex-end;
+}
+
+page .content .box .line .info .technician image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-left: 10rpx;
+}
+
+page .content .box .line::after {
+    display: block;
+    content: "";
+    width: 14rpx;
+    height: 26rpx;
+    background: url(https://m.angemo.com/static/technician/bookMore.png) no-repeat;
+    background-size: 100% auto;
+    margin-left: 10rpx;
+}
+
+page .content .box .address {
+    height: 130rpx;
+}
+
+page .content .box .address image {
+    width: 24rpx;
+    height: 29rpx;
+    margin-right: 14rpx;
+}
+
+page .content .box .address .default {
+    width: 66rpx;
+    height: 30rpx;
+    border-radius: 6rpx;
+    color: #fff;
+    font-size: 22rpx;
+    text-align: center;
+    line-height: 30rpx;
+    background: #81c935;
+    margin-left: 6rpx;
+}
+
+page .content .box .server image,page .content .box .time image {
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 14rpx;
+}
+
+page .content .box .noMore::after {
+    display: none;
+}
+
+page .content .box .product {
+    height: 272rpx;
+}
+
+page .content .box .product image {
+    width: 200px;
+    height: 200rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+page .content .box .product .productInfo {
+    flex: 1;
+    color: #666;
+    font-size: 30rpx;
+}
+
+page .content .box .product .productInfo .name {
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-height: 40rpx;
+    white-space: nowrap;
 }
 
-
-.goods .item {
-    width: 100%;
-    align-self: center;
+page .content .box .product .productInfo .count {
+    color: #999;
+    font-size: 26rpx;
+    margin: 14rpx 0 65rpx;
 }
 
-.goods .item .name {
-    width: 35%;
-    color: #2d2d2d;
+page .content .box .product .op b,page .content .box .product .op i {
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
 }
 
-.goods .item .selectitem {
-    width: 65%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: #808080;
-    font-size: .9rem;
-}
-
-.goods .num {
-    width: 100%;
-    border-top: 1rpx solid #e5e5e5;
-    justify-content: space-between;
-    background: #fff;
-    padding: 25rpx 30rpx;
-}
-.goods .num .add {
-  width: 57rpx;
-  height: 50rpx;
-  font-size: 32rpx;
-  border: 1rpx solid #e5e5e5;
-}
-.goods .num .cut {
-    width: 57rpx;
-    height: 50rpx;
-    font-size: 32rpx;
-    border: 1rpx solid #e5e5e5;
-  }
-.goods .num input {
-    width: 98rpx;
+page .content .box .product .op em {
+    display: block;
+    width: 60rpx;
+    line-height: 60rpx;
     text-align: center;
-    height: 50rpx;
-    font-size: 28rpx;
-    border: 1rpx solid #e5e5e5;
+    font-size: 26rpx;
 }
-.select_box{
-    background: #fff;
-    width: 80%;
-    position: relative;
-}
-.select{
-    box-sizing: border-box;
-    width: 100%;
-    height: 70rpx;
-    border:1px solid #efefef;
-    border-radius: 8rpx;
-    display: flex;
-    align-items: center;
-    padding: 0 20rpx 0 32rpx;
-}
-.select_text{
-    flex: 1;
-}
-.select_img{
-    width: 28rpx;
-    height: 28rpx;
-    display: block;
-    transition:transform 0.3s;
-}
-.select_img_rotate{
-    transform:rotate(180deg); 
-}
-.option_box{
-    position: absolute;
-    top: 70rpx;
-    width: 100%;
-    border:1px solid #efefef;
-    box-sizing: border-box;
-    height: 0;
-    overflow-y: auto;
-    border-top: 0;
-    background: #fff;
-    transition: height 0.3s;
-}
-.option{
-    display: block;
-    line-height: 40rpx;
-    font-size: 24rpx;
-    border-bottom: 1px solid #efefef;
-    padding: 10rpx 10rpx 10rpx 32rpx;
-}
-/* 底部加购 */
 
-.shopTabbar {
-    width: 100%;
-    height: 98rpx;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    z-index: 999;
-    border-top: 1rpx solid #e5e5e5;
-    box-shadow: 0px -6rpx 6rpx rgba(229, 229, 229, 0.2); /*阴影出现在元素上方*/
-  }
-  
-  .shopTabbar .content {
-    height: 100%;
-    justify-content: space-between;
-    padding: 0 30rpx;
+page .content .box .product .op i {
+    background: url(https://m.angemo.com/static/technician/bookDel.png) no-repeat;
+    background-size: 100% auto;
+}
+
+page .content .box .product .op b {
+    background: url(https://m.angemo.com/static/technician/bookAdd.png) no-repeat;
+    background-size: 100% auto;
+}
+
+page .content .box .product .op i.check {
+    background: url(https://m.angemo.com/static/technician/bookDel2.png) no-repeat;
+    background-size: 100% auto;
+}
+
+page .content .box .product .op b.check {
+    background: url(https://m.angemo.com/static/technician/bookAdd2.png) no-repeat;
+    background-size: 100% auto;
+}
+
+page .content .box .fare label::after {
+    content: "";
+    display: block;
+    width: 42rpx;
+    height: 42rpx;
+    background: url(https://m.angemo.com/static/technician/bookq.png) no-repeat;
+    background-size: 100% auto;
+    margin-left: 10rpx;
+}
+
+page .content .box .fare .t {
+    color: #999;
+    font-size: 24rpx;
+}
+
+page .content .box .allPrice {
+    justify-content: flex-end;
+}
+
+page .content .box .allPrice text {
+    color: #333;
+    font-size: 30rpx;
+}
+
+page .content .top {
+    padding: 0 20rpx;
+}
+
+page .content .inner {
+    padding: 0 10rpx;
+}
+
+page .content .inner .line {
+    padding: 0 10rpx 0 20rpx;
+}
+
+page .content .remarks {
+    padding: 0 20rpx 0 30rpx;
+}
+
+page .content .remarks .line .text {
     flex: 1;
-  }
-  
-  .shopTabbar .content .left view {
-    width: 120rpx;
-  }
-  
-  .shopTabbar .content .left view image {
-    width: 40rpx;
-    margin: 8rpx 0;
-  }
-  
-  .shopTabbar .content .left view,
-  .shopTabbar .content .left view navigator
-   {
-    flex-direction: column;
-  }
-  
-  .shopTabbar .content .left view.flexs .num {
-    background: red;
-    width: 28rpx;
-    height: 28rpx;
-    border-radius: 100%;
-    top: 0;
-    right: 24rpx;
-  }
-  
-  .shopTabbar .content .right {
-    width: 561rpx;
-    border: 1rpx solid #42Be9C;
-    border-radius: 35rpx;
-    height: 70rpx;
-    color: #fff;
+    max-width: 500rpx;
     overflow: hidden;
-  }
-  
-  .shopTabbar .content .right view {
-    flex: 1;
-    height: 100%;
-  }
-  
-  .shopTabbar .content .right view.bt_r {
-    background: #42Be9C;
-  }
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+page .content .bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120rpx;
+    background: #fff;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+page .content .bottom .all {
+    color: #333;
+    font-size: 30rpx;
+}
+
+page .content .bottom .all i {
+    color: #ff8601;
+    font-size: 40rpx;
+}
+
+page .content .bottom .btn {
+    width: 220rpx;
+    height: 80rpx;
+    background: #9f50f3;
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+page .back {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 336rpx;
+    background: url(https://m.angemo.com/static/technician/bookBack.png) no-repeat bottom;
+    background-size: 100% auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

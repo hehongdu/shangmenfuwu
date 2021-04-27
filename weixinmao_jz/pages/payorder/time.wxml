@@ -1,0 +1,27 @@
+<header title="服务时间"></header>
+<view class="content" wx:if="{{bookTime&&bookTime.length>0}}">
+    <view class="top" style="margin-top:{{header.height}}px">
+        <scroll-view class="scroll" scrollIntoView="{{'j'+tabIndex}}" scrollX="{{!0}}" scrollY="{{!1}}">
+            <view bind:tap="switchDate" class="{{tabIndex==i?'item check':'item'}}" data-idx="{{i}}" id="{{'j'+i}}" wx:for="{{bookTime}}" wx:for-index="i" wx:key="id">
+                <text wx:if="{{i==0}}">今天 {{item.showDate}}</text>
+                <text wx:elif="{{i==1}}">明天 {{item.showDate}}</text>
+                <text wx:elif="{{i==2}}">后天 {{item.showDate}}</text>
+                <text wx:else>{{item.showWeek}} {{item.showDate}}</text>
+                <text>{{item.isBookable?'可约':'不可约'}}</text>
+            </view>
+        </scroll-view>
+    </view>
+    <swiper bindchange="change" class="swiper" current="{{tabIndex}}">
+        <swiper-item wx:for="{{bookTime}}" wx:for-item="time" wx:key="id">
+            <view class="list flex">
+                <view class="item" wx:for="{{time.data}}" wx:for-index="i" wx:key="id">
+                    <label bind:tap="setCurrent" class="{{item.isCurrent?'check':''}}" data-index="{{i}}" wx:if="{{item.isBookable}}">
+            {{item.showTime}}
+          </label>
+                    <span bind:tap="setCurrent" data-index="{{i}}" wx:else>{{item.showTime}}</span>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="loading" wx:else></view>

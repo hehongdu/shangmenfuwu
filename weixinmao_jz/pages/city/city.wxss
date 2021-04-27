@@ -1,0 +1,307 @@
+page {
+    background-color: #f8f8f8;
+}
+
+.city,.city .current {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.city .current {
+    margin-top: 40rpx;
+    padding: 0 30rpx;
+}
+
+.city .current .label {
+    float: left;
+    width: 100%;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.city .current .location {
+    float: left;
+    width: 100%;
+    height: 100rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city .current .location label {
+    display: block;
+    width: 300rpx;
+    color: #999;
+    font-size: 30rpx;
+}
+
+.city .current .location icon {
+    width: 35rpx;
+    height: 100rpx;
+    background: url(https://oss.angemo.com/images/app/custom/home/icon_refresh.png) no-repeat 100%;
+    background-size: 35rpx 35rpx;
+}
+
+.city .current .location icon.rotate {
+    -webkit-animation: rotate 2s linear infinite;
+}
+
+.city .hot {
+    float: left;
+    width: 100%;
+    margin-top: 40rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.city .hot .label {
+    float: left;
+    width: 100%;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.city .hot .location {
+    float: left;
+    width: 100%;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+}
+
+.city .hot .location .item {
+    float: left;
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #fff;
+    color: #999;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    text-align: center;
+}
+
+.city .hot .location .item:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.city .opened {
+    float: left;
+    width: 100%;
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+}
+
+.city .opened .label {
+    color: #999;
+    font-size: 24rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.city .opened .label,.city .opened .location {
+    float: left;
+    width: 100%;
+}
+
+.city .opened .location .letter {
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #666;
+    padding: 25rpx 30rpx 11rpx;
+}
+
+.city .opened .location .list {
+    background: #fff;
+    padding: 0 30rpx;
+}
+
+.city .opened .location .list label {
+    display: block;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #eee;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #333;
+}
+
+.city .opened .location .list label:last-child {
+    border: none;
+}
+
+.letters {
+    position: fixed;
+    right: 0;
+    top: 414rpx;
+    z-index: 100;
+}
+
+.letters span {
+    display: block;
+    font-size: 20rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #333;
+    line-height: 40rpx;
+    width: 30rpx;
+    text-align: center;
+    padding-right: 30rpx;
+}
+
+.letters .cdk {
+    color: #9f50f3;
+}
+
+.setting-mask {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51,51,51,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.setting-mask .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500rpx;
+    height: 630rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+    background-size: 100% auto;
+}
+
+.setting-mask .box .form {
+    float: left;
+    width: 100%;
+    height: 630rpx;
+    background: url("https://oss.angemo.com/images/app/custom/home/location_tip.png") no-repeat top;
+    background-size: cover;
+    position: relative;
+}
+
+.setting-mask .box .form .title {
+    float: left;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 38rpx;
+    text-align: center;
+}
+
+.setting-mask .box .form .words {
+    float: left;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 150rpx;
+}
+
+.setting-mask .box .form .words text {
+    float: left;
+    width: 100%;
+    line-height: 48rpx;
+    color: #666;
+    font-size: 26rpx;
+    text-align: center;
+}
+
+.setting-mask .box .form>.login {
+    float: left;
+    width: 380rpx;
+    height: 74rpx;
+    line-height: 74rpx;
+    position: absolute;
+    left: 60rpx;
+    bottom: 30rpx;
+    background-color: #9e52f2;
+    border-radius: 37rpx;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.setting-mask .box .form>.close {
+    float: left;
+    width: 500rpx;
+    height: 70rpx;
+    position: absolute;
+    left: 0;
+    bottom: -120rpx;
+    background: url("https://oss.angemo.com/images/app/custom/icon/icon_close_70.png") no-repeat 50%;
+    background-size: 70rpx auto;
+}
+
+.scroll {
+    width: 100%;
+    height: calc(100vh);
+    position: absolute;
+    left: 0;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.showLetter {
+    width: 200rpx;
+    height: 200rpx;
+    line-height: 200rpx;
+    font-size: 120rpx;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    border-radius: 10rpx;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}

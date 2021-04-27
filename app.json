@@ -25,7 +25,9 @@
         "weixinmao_jz/pages/shop/shopOrder/shopOrder",
         "weixinmao_jz/pages/shop/project/index",
         "weixinmao_jz/pages/shop/addProject/index",
-        "weixinmao_jz/pages/shop/users/index"
+        "weixinmao_jz/pages/shop/users/index",
+        "weixinmao_jz/pages/payorder/time",
+        "weixinmao_jz/pages/city/city"
     ],
     "window": {
         "navigationBarTextStyle": "white",
@@ -35,6 +37,7 @@
         "enablePullDownRefresh": false
     },
     "tabBar": {
+        "custom": true,
         "color": "#6e6d6b",
         "selectedColor": "#42BE9C",
         "borderStyle": "white",
@@ -62,8 +65,14 @@
             {
                 "pagePath": "weixinmao_jz/pages/user/index",
                 "text": "我的",
-                "iconPath": "weixinmao_jz/resource/images/nav/jishi-off.png",
-                "selectedIconPath": "weixinmao_jz/resource/images/nav/user-on.png"
+                "iconPath": "weixinmao_jz/resource/images/nav/me-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/me-on.jpg"
+            },
+            {
+                "pagePath": "weixinmao_jz/pages/shop/shopPage/index",
+                "text": "首页",
+                "iconPath": "weixinmao_jz/resource/images/nav/me-off.png",
+                "selectedIconPath": "weixinmao_jz/resource/images/nav/me-on.jpg"
             }
         ]
     },

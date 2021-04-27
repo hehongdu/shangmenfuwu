@@ -20,7 +20,14 @@ Page({
             a.InitPage();
         });
     },
-    onShow: function(e) {},
+    onShow: function(e) {
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+              selected: 2
+            })
+        }
+    },
     InitPage: function() {
         var t = this, a = wx.getStorageSync("userInfo"), n = t.data.ordertype;
         e.util.request({

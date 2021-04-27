@@ -1,96 +1,114 @@
-<view class="container">
-    <view class="goods bg_f">
-        <view class="goodsTop flexs">
-            <view class="goodsImg">
-                <image src="../../resource/images/fuwu1.jpg" class="goodsImg"></image>
+<view class="content" wx:if="{{product&&product.id>0}}">
+    <view class="box top">
+        <view wx:if="{{product.productType==2}}">
+            <view bind:tap="showVisitAddress" class="line address flex_sw" wx:if="{{order.address&&order.address.name}}">
+                <image src="https://m.angemo.com/static/technician/bookAddress.png"></image>
+                <view class="info">
+                    <view class="text flex">
+						{{order.address.name}} {{order.address.number}}
+						<view class="default" wx:if="{{order.address.isDefault}}">默认</view>
+                    </view>
+                    <view class="contact">
+						{{order.address.contactName}}{{order.address.gender==0?'':'('+(order.address.gender==1?'先生':'女士')+')'}}
+						{{order.address.contactNumber}}
+					</view>
+                </view>
             </view>
-            <view class="goodsAbout flexs">
+            <view bind:tap="goCreateAddress" class="line address flex_sw" wx:elif="{{myAddressList.length==0}}">
+                <image src="https://m.angemo.com/static/technician/bookAddress.png"></image>
+                <view class="info flex_sw">
+                    <label>添加服务地址</label>
+                </view>
+            </view>
+            <view bind:tap="showVisitAddress" class="line address flex_sw" wx:else>
+                <image src="https://m.angemo.com/static/technician/bookAddress.png"></image>
+                <view class="info flex_sw">
+                    <label>选择服务地址</label>
+                </view>
+            </view>
+        </view>
+        <view bind:tap="showBookTime" class="line time flex_sw">
+            <image src="https://m.angemo.com/static/technician/bookTime.png"></image>
+            <view class="info flex_sw">
+                <label>服务时间</label>
+                <i wx:if="{{order.serviceDate}}">
+					{{order.serviceDateAlias+' '+order.serviceTime}}
+				</i>
+                <span wx:else>请选择服务时间</span>
+            </view>
+        </view>
+        <view class="line server flex_sw noMore" wx:if="{{technician&&technician.id>0}}">
+            <image src="https://m.angemo.com/static/technician/bookServer.png"></image>
+            <view class="info flex_sw">
+                <label>服务人员</label>
+                <view class="technician flex">
+                    <i>{{technician.nickname}}</i>
+                    <image src="{{technician.avatar}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="box inner">
+        <view class="line product flex noMore">
+            <image lazyLoad="true" src="{{product.src}}" wx:if="{{product.src}}"></image>
+            <view class="productInfo">
+                <view class="name">{{product.title}}</view>
+                <view class="count">x{{order.serviceCopy}}</view>
+                <view class="price">¥{{product.amount}}</view>
+            </view>
+            <view class="op flex">
+                <i bind:tap="decrease" class="{{order.serviceCopy<=1?'':'check'}}"></i>
+                <em>{{order.serviceCopy}}</em>
+                <b bind:tap="increase" class="{{order.serviceCopy>=4?'':'check'}}"></b>
+            </view>
+        </view>
+        <block wx:if="{{technician&&technician.isVisit}}">
+            <view bind:tap="showMap" class="line coupon flex_sw">
+                <view class="info flex_sw">
+                    <label>订单距离</label>
+                    <view class="text" wx:if="{{order.distanceFormat}}">{{order.distanceFormat}}</view>
+                    <span wx:else></span>
+                </view>
+            </view>
+            <view class="line fare noMore flex_sw">
                 <view>
-                    <view class="tit f14">特色全身油压养生SPA</view>
-                    <view class="cl_6 f12">
-                        <text class="js">90分钟特色全身油压，推油，疏通经络，活血化淤，扫除疲劳</text>
-                    </view>
-                    <view>
-                        <text>￥ 598.00</text>
+                    <label bind:tap="goTrafficExpenseExplain" class="flex">往返路费</label>
+                    <view wx:if="{{order.taxiFee>0}}">
+                        <text class="t" wx:if="{{order.isTaxi}}">夜间订单需付技师往返打车费</text>
+                        <text class="t" wx:else>订单超出{{config.freeDistance}}公里需付技师往返打车费</text>
                     </view>
                 </view>
+                <text>¥{{order.taxiFee}}</text>
+            </view>
+        </block>
+        <view bind:tap="showCoupon" class="line coupon flex_sw" wx:if="{{product&&product.productType==2&&isSpecial==false}}">
+            <view class="info flex_sw">
+                <label>优惠券</label>
+                <view class="text" wx:if="{{order.useCouponId>0}}">
+					-¥{{order.useCouponAmount}}
+				</view>
+                <span wx:else>暂无可用的优惠券</span>
+            </view>
+        </view>
+        <view class="line allPrice flex noMore">
+            <text>小计 ¥{{totalPrice}}</text>
+        </view>
+    </view>
+    <view class="box remarks">
+        <view class="line flex_sw">
+            <view bind:tap="goRequirement" class="info flex_sw">
+                <label>备注</label>
+                <view class="text" wx:if="{{order.requirement}}">{{order.requirement}}</view>
+                <span wx:else>可填写其他需求</span>
             </view>
         </view>
     </view>
-
-    <view class="goods bg_f">
-        <view class="item">
-            <van-cell title="服务时间" value="{{currentDateStr}}" arrow-direction="down" />
+    <view class="bottom flex_sw">
+        <view class="all">
+			应付：
+			<i>￥{{totalPrice}}</i>
         </view>
-        <view class="num flexs">
-          <view class="cl_3 f14">购买数量</view>
-          <view class="right flexs">
-            <text class="cut flexs" bindtap="sutBind">-</text>
-            <input value="{{num}}" bindinput='watchPassWord' type="number"></input>
-            <text class="add flexs cl_f" bindtap="addBind">+</text>
-          </view>
-        </view>
-        <view class="item">
-            <van-cell title="服务技师" value="小白" arrow-direction="down" />
-        </view>
-        <view class="item">
-            <van-cell title="客户地址" value="小白" arrow-direction="down" />
-        </view>
-        <view class="item">
-            <van-cell-group>
-                <van-field value="{{ remark }}" clearable label="备注" placeholder="可以填写其他需求"bind:click-icon="onClickIcon"/>
-            </van-cell-group>
-        </view>
+        <view bind:tap="createOrder" class="btn flex_center">提交订单</view>
     </view>
-
-
-
-    <!-- <view class="order">
-        <view class="title">
-        基本信息
-      </view>
-        <view class="list">
-            <view class="item">
-                <input name="name" placeholder="联系人姓名" type="text" value="{{address}}" style="width:90%"></input>
-            </view>
-            <view class="item">
-                <input name="phone" placeholder="联系人电话" type="text" value="{{address}}" style="width:90%"></input>
-            </view>
-            <view class="item">
-                <input name="phone" placeholder="详细地址" type="text" value="{{address}}" style="width:90%"></input>
-            </view>
-        </view>
-    </view>
-    <view class="main">
-        <view class="list">
-            <view class="item">
-                <view class="selectitem" style="width:100%;">
-                    <textarea name="content" placeholder="留言" style="line-height:normal;"></textarea>
-                </view>
-            </view>
-        </view>
-    </view> -->
-</view>
-
-<!-- 底部预约 -->
-<view class="shopTabbar flexs">
-    <view class="flexs content">
-        <view class="left flexs f12">
-            <view class="flexs pos_r">
-                <navigator class="flexs" hover-class="none" open-type="switchTab" url="/pages/index/index">
-                <text class="f14" style="color:red">¥ <text>890</text></text>
-                </navigator>
-            </view>
-        </view>
-        <view class="right flexs f12">
-            <view class="flexs bt_r cl_f" data-type="2" bindtap="toPayOrder">立即预约</view>
-        </view>
-    </view>
-</view>
-
-<view class="u-tap-btn">
-    <navigator class="u-go-home" openType="switchTab" url="/weixinmao_jz/pages/index/index">
-        <!-- <view class="iconfont fa fa-home"></view> -->
-        <text class="fa fa-home fa-lg tb" style="font-size:52rpx;margin-top:20rpx;"></text>
-    </navigator>
+    <view class="back" style="margin-top:{{header.height}}px"></view>
 </view>

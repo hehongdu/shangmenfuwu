@@ -1,0 +1,113 @@
+page {
+    background: #f8f8f8;
+    min-height: 100vh;
+}
+
+page .top {
+    background: #fff;
+    width: 100%;
+    height: 100rpx;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+page .top .scroll {
+    width: 100%;
+    height: 200rpx;
+    white-space: nowrap;
+}
+
+page .top .scroll .item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 75rpx;
+    text-align: center;
+    padding-top: 15rpx;
+    box-sizing: border-box;
+    height: 100rpx;
+    position: relative;
+}
+
+page .top .scroll .item text {
+    display: block;
+    color: #333;
+    font-size: 26rpx;
+}
+
+page .top .scroll .item text:last-child {
+    color: #999;
+    font-size: 22rpx;
+}
+
+page .top .scroll .item:first-child {
+    padding-left: 40rpx;
+}
+
+page .top .scroll .check text,page .top .scroll .check text:last-child {
+    color: #9f50f3;
+}
+
+page .top .scroll .check:first-child::after {
+    margin: 0 20rpx;
+}
+
+page .top .scroll .check::after {
+    display: block;
+    content: "";
+    width: 146rpx;
+    height: 3rpx;
+    background: #a053f3;
+    border-radius: 2rpx;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+page .swiper {
+    margin: 110rpx 0 0;
+    height: 100vh;
+}
+
+page .list {
+    width: 100%;
+    padding: 20rpx 30rpx 10rpx;
+    background: #fff;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+page .list .item:nth-child(4n) label,page .list .item:nth-child(4n) span {
+    margin-right: 0;
+}
+
+page .list label,page .list span {
+    width: 165rpx;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 6rpx;
+    border: 2rpx solid #ccc;
+    margin: 0 10rpx 20rpx 0;
+    color: #666;
+    font-size: 28rpx;
+}
+
+page .list label:nth-child(4n),page .list span:nth-child(4n) {
+    margin-right: 0;
+}
+
+page .list span {
+    opacity: .4;
+}
+
+page .list .check {
+    color: #9f50f3;
+    background: #f6effe;
+    border: 2rpx solid #9f50f3;
+}

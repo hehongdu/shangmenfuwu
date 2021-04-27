@@ -104,7 +104,15 @@ Page({
             url: "/weixinmao_jz/pages/myhouse/index"
         });
     },
-    onShow: function() {},
+    onShow: function() {
+        // tabbar
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+              selected: 3
+            })
+        }
+    },
     onHide: function() {},
     onUnload: function() {},
     onPullDownRefresh: function() {},

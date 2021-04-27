@@ -2,9 +2,8 @@
     <view class="container">
         <view class="box header">
 			<view class="cu-bar bg-red search">
-                <view class="action">
-					<text>广州</text>
-					<text class="cuIcon-triangledownfill"></text>
+                <view class="action" bindtap="toCitys">
+					<text style="color:#5d5959">{{area.cityName}}</text>
 				</view>
 				<view class="search-form radius">
 					<text class="cuIcon-search"></text>

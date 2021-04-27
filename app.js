@@ -23,7 +23,7 @@ App({
     },
     globalData: {
         baseUrl: "http://www.fzshop.com/",
-        userInfo: null
+        userInfo: null,
     },
     siteInfo: require("siteinfo.js")
 });

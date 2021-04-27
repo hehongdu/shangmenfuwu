@@ -1,0 +1,55 @@
+<scroll-view class="scroll" scrollIntoView="{{toView}}" scrollWithAnimation="true" scrollY="true">
+    <view class="content">
+        <view class="city">
+            <view class="current">
+                <view class="label">当前城市</view>
+                <view class="location">
+                    <label bindtap="setCurrentCity" data-id="{{location.cityId||0}}" data-name="{{location.cityName||''}}">
+					{{location.city||'未知'}}
+					</label>
+                    <icon bindtap="getLocation" class="{{isGettingLocation?'rotate':''}}"></icon>
+                </view>
+            </view>
+            <view class="hot">
+                <view class="label">热门城市</view>
+                <view class="location">
+                    <block wx:if="{{cityList&&cityList.length>0}}">
+                        <view bindtap="setCurrentCity" class="item" data-id="{{item.id}}" data-name="{{item.name}}" wx:if="{{item.isHot}}" wx:for="{{cityList}}" wx:key="id">
+									{{item.name}}
+								</view>
+                    </block>
+                </view>
+            </view>
+            <view class="opened" wx:if="{{citys&&citys.length>0}}">
+                <view class="label">开通城市</view>
+                <view class="location">
+                    <block wx:for="{{citys}}" wx:key="id">
+                        <view class="letter" id="letter{{item[0].letter}}">{{item[0].letter}}</view>
+                        <view class="list">
+                            <label bindtap="setCurrentCity" data-id="{{city.id}}" data-name="{{city.name}}" wx:for="{{item}}" wx:for-item="city" wx:key="id">{{city.name}}</label>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view catchtap="none" class="setting-mask" wx:if="{{isShowOpenSetting}}">
+            <view class="box">
+                <view class="form">
+                    <text class="title">定位授权</text>
+                    <view class="words">
+                        <text>你还未授权小程序获取你的定位</text>
+                        <text>位置信息用于获取当前所在城市</text>
+                    </view>
+                    <view catchtap="showOpenSetting" class="login">立即授权</view>
+                    <view catchtap="hideOpenSetting" class="close"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class="letters" wx:if="{{citys&&citys.length>0}}">
+    <span catchtap="bindLettersEvent" data-letter="{{item[0].letter}}" wx:for="{{citys}}" wx:key="id">
+		{{item[0].letter}}
+	</span>
+</view>
+<view class="showLetter" wx:if="{{showLetter}}">{{currentLetter}}</view>

@@ -1,4 +1,4 @@
-let baseUrl = 'http://xx.com'
+let baseUrl = 'https://api.angemo.com'
 
 
 function requestGet(url, data) {
